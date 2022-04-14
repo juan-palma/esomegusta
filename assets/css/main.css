@@ -1,0 +1,621 @@
+/*
+	*Main CSS para implementacion directa de sitios.
+	
+	*La adaptacion del bolierplate y este codigo son esfuerzo del eqipo de ID.A libre
+	*con agradecimientos especiales a Juan Palma encargado de la implementacion.
+*/
+
+/* ==========================================================================
+	Parametros Globales
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+/* font-family: 'Sen', sans-serif; */
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;700;900&display=swap'); */
+/* font-family: 'League Spartan', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300;1,400;1,600&display=swap');
+/* font-family: 'Barlow Condensed', sans-serif; */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300;1,700&display=swap'); */
+/* font-family: 'Cormorant Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+	--colorBackDark: #1a1918;
+	--colorBackColor: #393735;
+	--colorPrincipal: #a34f29;
+	--colorSecundario: #3a434d;
+	--colorTexto: var(--colorBackColor);
+	--margenGlobal: 6vw;
+	--anchoContainer: calc(100vw - (var(--margenGlobal) * 2));
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Sen', sans-serif;
+	font-weight: 900;
+}
+body, button, input, select, textarea, ::after, ::before{
+	font-family: 'Barlow Condensed', sans-serif;
+	font-weight: 400;
+	line-height: 1.24;
+	letter-spacing: 0.05em;
+	color: var(--colorTexto);
+}
+i::before{
+	font-family: inherit;
+	font-weight: inherit;
+}
+.container{
+	width: var(--anchoContainer);
+}
+.anchoFull{
+	width: 100vw;
+	position: relative;
+	margin-left: calc(var(--margenGlobal) * -1);
+}
+.anchoFullFlex{
+	width: 100vw;
+	position: relative;
+}
+	
+@-ms-viewport {
+	width: device-width;
+	zoom: 1.0;
+	max-zoom: 1.0;
+}
+
+@viewport {
+	width: device-width;
+	zoom: 1.0;
+	max-zoom: 1.0;
+}
+
+
+/* ==========================================================================
+	Estilos visiales para elementos GENERALES
+========================================================================== */
+.desaparece{
+	display: none !important;
+	visibility: hidden !important;
+	width: 1px !important;
+	height: 1px !important;
+	position: absolute !important;
+	overflow: hidden !important;
+	opacity: 0 !important;
+	clip: rect(1px 1px 1px 1px) !important;
+	
+}
+.ocultar{
+	display: none !important;
+}
+.opacidad0{
+	opacity: 0 !important;
+}
+.opacidad1{
+	opacity: 1 !important;
+}
+.animar{
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.animar1-4{
+	-webkit-transition: all 1.4s ease-in-out;
+	-moz-transition: all 1.4s ease-in-out;
+	-o-transition: all 1.4s ease-in-out;
+	-ms-transition: all 1.4s ease-in-out;
+	transition: all 1.4s ease-in-out;
+}
+.colorPrincipal{
+	color: var(--colorPrincipal) !important;
+}
+.colorBackColor{
+	color: var(--colorBackColor) !important;
+}
+p {
+	margin-bottom: 1.4em;
+}
+p:last-of-type {
+	margin-bottom: 0;
+}
+
+
+
+
+
+
+/* ==========================================================================
+	Estilos visuales para la Agencia o el Desarrollador
+========================================================================== */
+#footerDeveloper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+	flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 12%;
+    bottom: 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+	#footerDeveloper .interno{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		color: #45413c;
+    	font-weight: 300;
+	}
+		#footerDeveloper a {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			text-decoration: none;
+			color: #90502f;
+			font-weight: 300;
+		}
+			#footerDeveloper img {
+				width: 48px;
+				height: 48px;
+				object-fit: contain;
+				object-position: center;
+			}
+			span.developerName {
+				white-space: nowrap;
+				display: inline-flex;
+				margin: 0 2px;
+			}
+
+
+
+
+/* ==========================================================================
+	Estilos visiales de la ventana de login
+========================================================================== */
+#loading{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 0px;
+	top: 0px;
+	background: var(--colorBackDark) /*url(../img/ajax.webp)*/ no-repeat center center;
+	z-index: 999999;
+	transition: all 1s ease-in-out;
+}
+	#loadingBoxMain {
+		width: 126px;
+		height: auto;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+		#boxLoadingContador {
+			width: 126px;
+			height: 126px;
+			margin-top: 62px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+			#porcentajeNumero {
+				color: white;
+				position: relative;
+				font-size: 24px;
+				position: absolute;
+			}
+
+
+
+/* ==========================================================================
+	Estilos visiales de la ventana pop de avisos
+========================================================================== */
+div#ventanaPOP {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(0 0 0 / 84%);
+	z-index: 99999999;
+	transition: all 200ms ease-in-out;
+}
+	#ventanaPOP .ventanaCerrar {
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		top: 18px;
+		left: auto;
+		right: 18px;
+		background: darkred;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		line-height: 0;
+		border-radius: 4px;
+		padding-bottom: 2px;
+		cursor: pointer;
+		font-weight: 900;
+		transition: all 200ms ease-in-out;
+	}
+	#ventanaPOP .ventanaCerrar:hover{
+		background-color: orangered;
+	}
+	#ventanaPOP .mensajeBox {
+		max-width: 86%;
+		height: auto;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 3em;
+		background: #fff;
+		border: 8px solid #555;
+		border-radius: 30px;
+		font-size: 120%;
+		transition: all 200ms ease-in-out;
+	}
+		#ventanaPOP button {
+			appearance: none;
+			padding: 6px 24px;
+			margin: 24px 0 0;
+			border: 0;
+			border-radius: 6px;
+			background-color: #444;
+			color: #fff;
+			cursor: pointer;
+			transition: all 200ms ease-in-out;
+		}
+		#ventanaPOP .mensajeBox button:hover{
+			background-color: #000 !important;
+		}
+		div#ventanaPOP .mensajeBox i:before {
+			font-size: 360%;
+			margin-bottom: 30px;
+			display: block;
+		}
+
+
+
+	div#ventanaPOP.ok .mensajeBox i:before{
+		color: #1ba902;
+	}
+	div#ventanaPOP.ok .mensajeBox{
+		border: 8px solid #1ba902;
+	}
+	div#ventanaPOP.ok .mensajeBox button{
+		background-color: #1ba902;
+	}
+
+	div#ventanaPOP.alert .mensajeBox i:before{
+		color: #ddaa01;
+	}
+	div#ventanaPOP.alert .mensajeBox{
+		border: 8px solid #ddaa01;
+	}
+	div#ventanaPOP.alert .mensajeBox button{
+		background-color: #ddaa01;
+	}
+
+	div#ventanaPOP.error .mensajeBox i:before{
+		color: #b42b08;
+	}
+	div#ventanaPOP.error .mensajeBox{
+		border: 8px solid #b42b08;
+	}
+	div#ventanaPOP.error .mensajeBox button{
+		background-color: #b42b08;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Estilos visiales del sitio.
+========================================================================== */
+#fondo_body{
+	background : var(--colorBackDark);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Estilos para un espect ratio de 2:1
+========================================================================== */
+@media (min-aspect-ratio: 2/1) {
+	
+}
+
+/* ==========================================================================
+	Estilos para un espect ratio de 8:5
+========================================================================== */
+@media (min-aspect-ratio: 8/5) {
+	
+}
+
+
+
+
+
+
+/* ==========================================================================
+	Estilos para un especto de pie
+========================================================================== */
+@media screen and (orientation:portrait){
+	:root{
+		--margenGlobal: 8vw;
+	}
+	.onlyLanscape{
+		display: none !important;
+		visibility: hidden !important;
+		width: 0px !important;
+		height: 0px !important;
+		overflow: hidden !important;
+	}
+
+
+	
+}
+/* ==========================================================================
+	Estilos para un especto de pie pero en dispositivos pequeños
+========================================================================== */
+@media screen and (orientation:portrait) and (max-width: 680px){
+	
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+	Estilos para un especto de acostado
+========================================================================== */
+@media screen and (orientation:landscape){
+	.onlyPortrait{
+		display: none !important;
+		visibility: hidden !important;
+		width: 0px !important;
+		height: 0px !important;
+		overflow: hidden !important;
+	}	
+}
+/* ==========================================================================
+	Estilos para un especto acostado pero en dispositivos medianos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 980px){
+
+}
+/* ==========================================================================
+	Estilos para un espect acostado pero en dispositivos chicos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 860px){
+
+}
+/* ==========================================================================
+	Estilos para un espect acostado pero en dispositivos chicos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 720px){
+	
+}
+/* ==========================================================================
+	Estilos para un espect acostado pero en dispositivos muy chicos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-height: 460px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 1600px) {
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 1280px) {
+
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 1024px) {
+
+}
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (min-width: 860px) {
+	
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 846px) {
+	:root{
+		--margenGlobal: 8vw;
+	}
+}
+
+
+
+
+
+
+@media only screen and (max-width: 760px){
+	.onlyDesktop{
+		display: none !important;
+		visibility: hidden !important;
+		width: 0px !important;
+		height: 0px !important;
+		overflow: hidden !important;
+	}
+}
+@media only screen and (min-width: 760px){
+	.onlyMobile{
+		display: none !important;
+		visibility: hidden !important;
+		width: 0px !important;
+		height: 0px !important;
+		overflow: hidden !important;
+	}
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 680px) {
+	
+}
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 590px) {
+	
+}
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 480px) {
+	
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+	Media Queries
+========================================================================== */
+@media only screen and (max-width: 370px) {
+	
+}
+
+
+
+
+
+
+
+
+
+

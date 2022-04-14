@@ -1,0 +1,118 @@
+{
+	"lang": "es",
+	"short_name": "juanpalma",
+	"name": "Juan Palma - Porfolio",
+	"description": "Quién es Juan Palma, este es mi porfolio (portafolio), podras conocer un poco de mi trabajo, mis capacidades, formación, hobbies y más.",
+	"icons": [
+		{
+			"src": "assets/img/icons/icono-app-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "assets/img/icons/icono-app-384.png",
+			"type": "image/png",
+			"sizes": "384x384"
+		},
+		{
+			"src": "assets/img/icons/icono-app-256.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		},
+		{
+			"src": "assets/img/icons/icono-app-192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "assets/img/icons/icono-app-180.png",
+			"type": "image/png",
+			"sizes": "180x180"
+		},
+		{
+			"src": "assets/img/icons/icono-app-152.png",
+			"type": "image/png",
+			"sizes": "152x152"
+		},
+		{
+			"src": "assets/img/icons/icono-app-144.png",
+			"type": "image/png",
+			"sizes": "144x144"
+		},
+		{
+			"src": "assets/img/icons/icono-app-120.png",
+			"type": "image/png",
+			"sizes": "120x120"
+		},
+		{
+			"src": "assets/img/icons/icono-app-114.png",
+			"type": "image/png",
+			"sizes": "114x114"
+		},
+		{
+			"src": "assets/img/icons/icono-app-96.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "assets/img/icons/icono-app-80.png",
+			"type": "image/png",
+			"sizes": "80x80"
+		},
+		{
+			"src": "assets/img/icons/icono-app-76.png",
+			"type": "image/png",
+			"sizes": "76x76"
+		},
+		{
+			"src": "assets/img/icons/icono-app-72.png",
+			"type": "image/png",
+			"sizes": "72x72"
+		},
+		{
+			"src": "assets/img/icons/icono-app-60.png",
+			"type": "image/png",
+			"sizes": "60x60"
+		},
+		{
+			"src": "assets/img/icons/icono-app-57.png",
+			"type": "image/png",
+			"sizes": "57x57"
+		},
+		{
+			"src": "assets/img/icons/icono-app-48.png",
+			"type": "image/png",
+			"sizes": "48x48"
+		},
+		{
+			"src": "assets/img/icons/icono-app-256.png",
+			"type": "image/png",
+			"sizes": "256x256",
+			"purpose": "maskable"
+		},
+		{
+			"src": "assets/img/icons/icono-app-192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "maskable"
+		}
+	],
+	"start_url": "/index.html",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"scope": "/",
+	"theme_color": "#a34f29",
+	"background_color": "#1a1918",
+	"screenshots": [
+		{
+			"src": "assets/img/screenshot1.jpg",
+			"type": "image/png",
+			"sizes": "540x720"
+		},
+		{
+			"src": "assets/img/screenshot2.jpg",
+			"type": "image/jpg",
+			"sizes": "540x720"
+		}
+	]
+}

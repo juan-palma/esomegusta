@@ -189,16 +189,17 @@ function buscar(e){
 	console.log('buscando...');
 }
 
-colorThemeActivo = 'dark';
+//colorThemeActivo = 'dark';
 function colorTheme(){
-	if(colorThemeActivo == this.id){ return; }
-	if(this.id == 'clear'){
-		el.destacados.classList.add('clearActivo');
-		colorThemeActivo = this.id;
-	} else{
-		el.destacados.classList.remove('clearActivo');
-		colorThemeActivo = this.id;
-	}
+	el.destacados.classList.toggle('clearActivo');
+	// if(colorThemeActivo == this.id){ return; }
+	// if(this.id == 'clear'){
+	// 	el.destacados.classList.add('clearActivo');
+	// 	colorThemeActivo = this.id;
+	// } else{
+	// 	el.destacados.classList.remove('clearActivo');
+	// 	colorThemeActivo = this.id;
+	// }
 }
 
 
@@ -482,9 +483,7 @@ function iniciar() {
 	el.formBuscar.addEventListener('submite', buscar);
 
 	el.btnDark = document.getElementById('dark');
-	el.btnClear = document.getElementById('clear');
 	el.btnDark.addEventListener('click', colorTheme);
-	el.btnClear.addEventListener('click', colorTheme);
 	el.destacados = document.getElementById('destacados');
 	el.escenario = document.getElementById('escenario');
 	el.btnSolo = document.getElementById('soloArte');

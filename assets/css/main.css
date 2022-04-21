@@ -8,34 +8,49 @@
 /* ==========================================================================
 	Parametros Globales
 ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap'); */
 /* font-family: 'Sen', sans-serif; */
-/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;700;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;500;700;900&display=swap'); */
 /* font-family: 'League Spartan', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,300;0,400;0,600;1,100;1,300;1,400;1,600&display=swap');
 /* font-family: 'Barlow Condensed', sans-serif; */
 /* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;1,300;1,700&display=swap'); */
 /* font-family: 'Cormorant Garamond', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap'); */
+/* font-family: 'Cormorant Garamond', sans-serif; */
+/* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
+/* font-family: 'Indie Flower', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+/* font-family: 'Grape Nuts', cursive; */
+/* @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap'); */
+/* font-family: 'Dongle', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+/* font-family: 'Itim', cursive; */
 
 :root{
-	--colorBackDark: #1a1918;
+	--colorBackFondo: #f6f0e3;
 	--colorBackColor: #393735;
-	--colorPrincipal: #a34f29;
+	--colorPrincipal: #0383db;
+	--colorPrincipalDark: #0077c6;
 	--colorSecundario: #3a434d;
-	--colorTexto: var(--colorBackColor);
+	--colorTercero: #47db03;
+	--colorTexto: #312f2e;
 	--margenGlobal: 6vw;
 	--anchoContainer: calc(100vw - (var(--margenGlobal) * 2));
+	--tipografiaGeneral: 'Itim', cursive;
+	--tipografiaTitulos: 'Sen', sans-serif;
+	--tipografiaEspecial: 'Grape Nuts', cursive;
 }
 h1, h2, h3, h4, h5, h6{
-	font-family: 'Sen', sans-serif;
-	font-weight: 900;
+	font-family: var(--tipografiaTitulos);
+	font-weight: 700;
 }
 body, button, input, select, textarea, ::after, ::before{
-	font-family: 'Barlow Condensed', sans-serif;
-	font-weight: 400;
+	font-family: var(--tipografiaGeneral);
+	font-weight: 500;
 	line-height: 1.24;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.01em;
 	color: var(--colorTexto);
 }
 i::before{
@@ -47,11 +62,13 @@ i::before{
 }
 .anchoFull{
 	width: 100vw;
+	flex: 1 0 100vw;
 	position: relative;
 	margin-left: calc(var(--margenGlobal) * -1);
 }
 .anchoFullFlex{
 	width: 100vw;
+	flex: 1 0 100vw;
 	position: relative;
 }
 	
@@ -106,7 +123,7 @@ i::before{
 	transition: all 1.4s ease-in-out;
 }
 .colorPrincipal{
-	color: var(--colorPrincipal) !important;
+	color: var(--colorPrincipalDark) !important;
 }
 .colorBackColor{
 	color: var(--colorBackColor) !important;
@@ -116,6 +133,14 @@ p {
 }
 p:last-of-type {
 	margin-bottom: 0;
+}
+img.cuadroGuiaW {
+	width: 100%;
+	height: auto;
+}
+img.cuadroGuiaH {
+	width: auto;
+	height: 100%;
 }
 
 
@@ -128,16 +153,18 @@ p:last-of-type {
 ========================================================================== */
 #footerDeveloper {
     width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
+	height: auto;
+	position: relative;
+	display: flex;
 	flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0.6rem 12%;
-    bottom: 0px;
-    box-sizing: border-box;
-    background-color: #fff;
+	justify-content: center;
+	align-items: center;
+	padding: 0.6rem 12%;
+	bottom: 0px;
+	box-sizing: border-box;
+	background-color: #fff;
+	top: auto;
+	align-self: flex-end;
 }
 	#footerDeveloper .interno{
 		display: flex;
@@ -182,10 +209,10 @@ p:last-of-type {
 	align-items: center;
 	left: 0px;
 	top: 0px;
-	background: var(--colorBackDark) /*url(../img/ajax.webp)*/ no-repeat center center;
-	z-index: 999999;
-	transition: all 1s ease-in-out;
+	background: var(--colorBackFondo) /*url(../img/ajax.webp)*/ no-repeat center center;
+	z-index: 999999998;
 }
+
 	#loadingBoxMain {
 		width: 126px;
 		height: auto;
@@ -226,7 +253,7 @@ div#ventanaPOP {
 	justify-content: center;
 	align-items: center;
 	background: rgb(0 0 0 / 84%);
-	z-index: 99999999;
+	z-index: 999999998;
 	transition: all 200ms ease-in-out;
 }
 	#ventanaPOP .ventanaCerrar {
@@ -318,6 +345,171 @@ div#ventanaPOP {
 		background-color: #b42b08;
 	}
 
+/* ==========================================================================
+	Estilos visiales para los elementos del fomr y las validaciones
+========================================================================== */
+.boxInput{
+	margin: 6px 0;
+	position: relative;
+}
+	.inputEfect{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+		.inputEfect .efectoLinea {
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			display: block;
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			border-radius: 20px;
+			z-index: 10;
+		}
+		input,
+		textarea {
+			width: 100%;
+			height: auto;
+			display: block;
+			position: relative;
+			margin: 0;
+			padding: 6px 18px;
+			font-family: var(--tipografiaGeneral);
+			font-size: 110%;
+			color: var(--colorTexto);
+			border: 1px solid rgba(228, 228, 228, 0.6);
+			border-radius: 20px;
+			background-color: var(--colorBackFondo);
+			box-shadow: inset 6px 6px 10px 0 rgb(0 0 0 / 11%), inset -6px -6px 10px 0 rgb(255 255 255 / 38%);
+			outline: none;
+			z-index: 20;
+			transition: all 200ms ease-in-out;
+		}
+		input:focus,
+		input:active,
+		input:target,
+		textarea:focus,
+		textarea:active,
+		textarea:target{
+			outline: none;
+			background-color: #ffffff;
+		}
+		textarea{
+			resize: none;
+		}
+		@keyframes laser {
+			0%{
+				opacity: 0;
+				clip-path: inset(-1px 101% -1px -3%);
+			}
+			15%{
+				opacity: 1;
+			}
+			35%{
+				opacity: 1;
+			}
+			50%{
+				opacity: 0;
+				clip-path: inset(-1px -3% -1px 101%);
+			}
+			100%{
+				opacity: 0;
+				clip-path: inset(-1px -3% -1px 101%);
+			}
+		}
+		input:focus ~ .efectoLinea,
+		input:active ~ .efectoLinea,
+		input:target ~ .efectoLinea,
+		textarea:focus ~ .efectoLinea,
+		textarea:active ~ .efectoLinea,
+		textarea:target ~ .efectoLinea{
+			background-color: #fffad9;
+			animation: laser 4s ease-in-out infinite;
+		}
+
+		input#btn{
+			width: auto;
+			padding: 1rem 3rem;
+			box-shadow: -6px -6px 22px 0 rgb(255 255 255 / 11%), 6px 6px 16px 0 rgb(26 26 26 / 61%);
+			background-color: black;
+			margin-top: 24px;
+			align-self: stretch;
+			cursor: pointer;
+		}
+
+		input#btnForm:hover,
+		input#btnForm:focus,
+		input#btnForm:active,
+		input#btnForm:target{
+			background-color: #ff6b26;
+		}
+		.boxInput .iconoStatus {
+			width: auto;
+			height: calc(100% - 2px);
+			position: absolute;
+			top: auto;
+			left: auto;
+			right: 1px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-bottom-right-radius: 50%;
+			border-top-right-radius: 50%;
+			overflow: hidden;
+			z-index: 30;
+			transition: all 200ms ease-in-out;
+		}
+			.boxInput .iconoStatus i:before{
+				transition: all 200ms ease-in-out;
+			}
+	.boxInput .inputError {
+		width: 100%;
+		height: 18px;
+		position: absolute;
+		padding: 3px 1rem;
+		font-size: 90%;
+		opacity: 0;
+		transition: all 200ms ease-in-out;
+	}
+
+.boxInput.valido{
+	outline: none;
+}
+	.boxInput.valido .iconoStatus{
+		opacity: 1;
+	}
+		.boxInput.valido .iconoStatus i:before{
+			color: #00ffd5;
+		}
+
+.boxInput.error{
+	outline: none;
+}
+	.boxInput.error .iconoStatus{
+		opacity: 1;
+	}
+		.boxInput.error .iconoStatus i:before{
+			content: "\f057";
+			color: #fff;
+		}
+	.boxInput.error input,
+	.boxInput.error textarea{
+		background-color: #a33729;
+	}
+	.boxInput.error input:focus,
+	.boxInput.error input:active,
+	.boxInput.error input:target,
+	.boxInput.error textarea:focus,
+	.boxInput.error textarea:active,
+	.boxInput.error textarea:target{
+		background-color:#d23d34;
+	}
+	.boxInput.error .inputError{
+		opacity: 1;
+		color: #4d0000;
+	}
 
 
 
@@ -331,20 +523,532 @@ div#ventanaPOP {
 
 
 
-
-
+.resaltar {
+	font-weight: 900;
+}
 /* ==========================================================================
 	Estilos visiales del sitio.
 ========================================================================== */
 #fondo_body{
-	background : var(--colorBackDark);
+	min-height: 100vh;
+	background : var(--colorBackFondo);
 	background-size: cover;
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
+	header#mainHeader {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+		section#navGlobal {
+			width: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: calc(var(--margenGlobal) / 3) 0;
+			z-index: 100;
+		}
+			div#logo{
+				flex: 0 0 80px;
+				position: relative;
+			}
+			div#accionBox {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+			}
+				#buscarBox{
+					margin-right: 24px;
+				}
+					#buscarBox input{
+						width: 140px;
+					}
+					#buscarBox input:hover,
+					#buscarBox input:focus,
+					#buscarBox input:active,
+					#buscarBox input:target{
+						width: 240px;
+					}
+					#btnBuscar {
+						width: auto;
+						height: calc(100% - 2px);
+						position: absolute;
+						top: auto;
+						left: auto;
+						right: 1px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-bottom-right-radius: 50%;
+						border-top-right-radius: 50%;
+						overflow: hidden;
+						z-index: 30;
+						transition: all 200ms ease-in-out;
+					}
+					#btnBuscar:hover{
+						background-color: var(--colorSecundario);
+						color: #fff;
+					}
+					#btnBuscar:hover i::before{
+						color: #fff;
+					}
+						#btnBuscar i{
+							position: absolute;
+							transition: all 200ms ease-in-out;
+							cursor: pointer;
+						}
+							#btnBuscar i:before{
+								transition: all 200ms ease-in-out;
+								cursor: pointer;
+							}
+					#btnMenu {
+						width: 35.5px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding: 9px;
+						margin-right: -9px;
+						border-radius: 7px;
+						cursor: pointer;
+						z-index: 999999993;
+						transition: all 200ms ease-in-out;
+					}
+					#btnMenu:hover{
+						color: #fff;
+						background-color: var(--colorSecundario);
+					}
+					#btnMenu:hover i::before{
+						color: #fff;
+					}
+						#btnMenu i{
+							display: block;
+						}
+							#btnMenu i::before {
+								font-size: 124%;
+								line-height: .8;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								letter-spacing: 0;
+								padding-top: 0.2px;
+								transition: all 200ms ease-in-out;
+							}
+					#btnMenu.activo{
+						background-color: var(--colorTexto);
+					}
+						#btnMenu.activo i::before{
+							color: #fff;
+							content: "\f00d";
+						}
+					#btnMenu.activo:hover{
+						background-color: var(--colorBackFondo);
+					}
+						#btnMenu.activo:hover i::before{
+							color: #b42b08;
+						}
+			nav#menuGlobal {
+				position: fixed;
+				width: 68vw;
+				height: 100vh;
+				left: auto;
+				right: -68.01vw;
+				top: 0px;
+				background-color: var(--colorSecundario);
+				z-index: 999999992;
+				border-radius: 38px 0px 0px 38px;
+				transition: all 500ms cubic-bezier(0.52, 0.1, 0.32, 1);
+			}
+			nav#menuGlobal.activo{
+				right: -0.01vw;
+			}
+		section#destacados {
+			height: calc(100vw * 0.625);
+			max-height: 100vh;
+			position: relative;
+			z-index: 2;
+		}
+		section#destacados .clear{
+			opacity: 0;
+		}
+		section#destacados.clearActivo .clear{
+			opacity: 1;
+		}
+			section#destacados > img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: calc(50% + 28%) top;
+				position: absolute;
+				transition: all 350ms ease-in-out;
+			}
+			#escenario{
+				opacity: 0;
+				transition: all 1.5s cubic-bezier(0.64, -0.01, 0.35, 0.99);
+			}
+			section#destacados.soloArte #escenario{
+				opacity: 1;
+			}
+			div#infoDestcadosGlobal {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				flex-direction: column;
+			}
+				div#destacadoMontajeBox {
+					width: 100%;
+					height: 72.5%;
+					display: flex;
+					justify-content: center;
+					position: absolute;
+					top: 17.5%;
+					overflow: hidden;
+				}
+					div#destacadoMontajeBox img.montaje {
+						width: auto;
+						height: 100%;
+						position: absolute;
+						top: 0px;
+						transform-origin: 25% -24.3%;
+						transition: all 1.5s cubic-bezier(0.64, -0.01, 0.35, 0.99);
+					}
+					section#destacados.clearActivo div#destacadoMontajeBox img.montaje{
+						filter: invert(1);
+					}
+					div#destacadoMontajeBox img.montaje.anterior {
+						transform: rotate(140deg);
+					}
+					div#destacadoMontajeBox img.montaje.siguiente {
+						transform: rotate(-140deg);
+					}
+			
+			#infoDestcadosGlobal h1{
+				width: calc(100vw - (var(--margenGlobal)) * 2);
+				height: 11.2%;
+				margin: 0px;
+				padding-left: 110px;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				font-family: var(--tipografiaEspecial);
+				font-size: clamp(26px, 5vw, 42px);
+				font-weight: 900;
+				color: var(--colorPrincipalDark);
+				position: absolute;
+				top: 0;
+				right: var(--margenGlobal);
+			}
+			div#destacadosControlTheme {
+				position: absolute;
+				top: calc(17.6% + 1%);
+				color: #fff;
+				left: auto;
+				right: var(--margenGlobal);
+				display: flex;
+				justify-content: flex-end;
+				gap: 16px;
+				cursor: pointer;
+			}
+			section#destacados.clearActivo div#destacadosControlTheme{
+				color: var(--colorTexto);
+			}
+				.controlTheme{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 4px;
+					opacity: 1;
+					transition: all 250ms ease-in-out;
+				}
+				#clear{
+					opacity: .2;
+				}
+				#dark:hover, #clear:hover{
+					opacity: 1;
+				}
+				section#destacados.clearActivo #dark{
+					opacity: .2;
+				}
+				section#destacados.clearActivo #clear{
+					opacity: 1;
+				}
+					div#destacadosControlTheme .colorTheme {
+						width: 26px;
+						height: 26px;
+						border-radius: 4px;
+						cursor: pointer;
+						border: 1px solid var(--colorBackFondo);
+					}
+					section#destacados.clearActivo div#destacadosControlTheme .colorTheme{
+						border: 1px solid var(--colorTexto);
+					}
+					#dark .colorTheme{
+						background-color: var(--colorTexto);
+					}
+					#clear .colorTheme{
+						background-color: var(--colorBackFondo);
+					}
+					#soloArte{
+						cursor: pointer;
+						transition: all 200ms ease-in-out;
+					}
+						#soloArte::before {
+							content: "Solo Arte";
+							color: #fff;
+							transition: all 200ms ease-in-out;
+						}
+						#soloArte i::before{
+							color: #fff;
+							font-size: 160%;
+							transition: all 200ms ease-in-out;
+						}
+						section#destacados.clearActivo #soloArte::before,
+						section#destacados.clearActivo #soloArte i::before{
+							color: var(--colorTexto);
+						}
+						section#destacados.soloArte #soloArte::before{
+							content: "Todo";
+						}
+						#soloArte:hover i::before,
+						section#destacados.clearActivo #soloArte:hover i::before{
+							color: var(--colorPrincipal);
+						}
 
+			div#destacadosTitulo {
+				width: 32%;
+				position: relative;
+				font-size: clamp(9px, 1vw, 30px);
+				color: var(--colorBackFondo);
+				right: var(--margenGlobal);
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				margin-bottom: 34px;
+			}
+			section#destacados.clearActivo div#destacadosTitulo{
+				color: var(--colorTexto);
+			}
+			section#destacados.soloArte div#destacadosTitulo{
+				display: none;
+			}
+				div#destacadosTitulo span {
+					font-weight: 100;
+					font-family: 'Grape Nuts';
+					transition: all 700ms ease-in-out;
+					transform: translateY(0);
+					opacity: 1;
+				}
+				div#destacadosTitulo span.out{
+					transform: translateY(-20px);
+					opacity: 0;
+				}
+				div#destacadosTitulo h2 {
+					font-size: 130%;
+					transition: all 700ms ease-in-out;
+					clip-path: inset(-1px -1% -1px -1%);
+				}
+				div#destacadosTitulo h2.out{
+					clip-path: inset(-1px -1% -1px 101%);
+				}
+				div#destacadosTitulo h3 {
+					font-size: 360%;
+					line-height: 1;
+					font-family: 'Itim';
+					transition: all 700ms ease-in-out;
+					clip-path: inset(-1px -1% -1px -1%);
+				}
+				div#destacadosTitulo h3.out{
+					clip-path: inset(-1px 101% -1px -1%);
+				}
+			div#destacadosInfoGlobal {
+				width: 32%;
+				position: relative;
+				color: var(--colorTexto);
+				font-family: 'Barlow Condensed';
+				font-size: clamp(12px, 1.2vw, 20px);
+				left: auto;
+				right: var(--margenGlobal);
+				display: flex;
+				justify-content: flex-end;
+				border-radius: 14px;
+				overflow: hidden;
+				margin-bottom: 48px;
+				transition: all 700ms ease-in-out;
+				opacity: 1;
+			}
+			section#destacados.clearActivo div#destacadosInfoGlobal{
+				color: var(--colorBackFondo);
+			}
+			section#destacados.soloArte div#destacadosInfoGlobal{
+				display: none;
+			}
+				div#destacadosInfoGlobal::before {
+					content: "";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background-color: var(--colorBackFondo);
+					opacity: .8;
+					left: 0px;
+					top: 0px;
+				}
+				section#destacados.clearActivo div#destacadosInfoGlobal::before{
+					background-color: var(--colorTexto);
+				}
+			
+				div#destacadosInfoBox {
+					padding: 24px;
+					position: relative;
+					display: flex;
+					gap: 26px;
+				}
+					div#destacadosInfoBox .costo {
+						padding-bottom: 32px;
+					}
+						span.precio {
+							font-size: 210%;
+							font-weight: 900;
+							color: #fff;
+							position: relative;
+							z-index: 14;
+						}
+						span.precio:before {
+							content: "";
+							width: 110%;
+							height: 144%;
+							background-color: var(--colorPrincipal);
+							position: absolute;
+							z-index: -1;
+							top: -20%;
+							left: -5%;
+							border-radius: 7px;
+						}
+					div#destacadosInfoBox .descripcion {
+						font-size: 98%;
+						line-height: 1.16;
+						transition: all 700ms ease-in-out;
+						opacity: 1;
+					}
+					
+					div#destacadosInfoBox .medidasGlobal {
+						position: relative;
+					}
+						div#destacadosInfoBox .medidasGlobal h4,
+						div#destacadosInfoBox .medidasGlobal li{
+							white-space: nowrap;
+						}
+						div#destacadosInfoBox .medidasGlobal h4 {
+							font-family: 'Barlow Condensed';
+							margin-bottom: 8px;
+							color: var(--colorPrincipalDark);
+						}
+
+			#destacadosArticulosGeneral{
+				width: calc(24% - var(--margenGlobal));
+				height: auto;
+				position: absolute;
+				left: var(--margenGlobal);
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 12px
+			}
+			section#destacados.soloArte #destacadosArticulosGeneral{
+				display: none;
+			}
+				div#destacadosArticulos {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 26px;
+					justify-content: center;
+					align-items: flex-start;
+				}
+					div#destacadosArticulos .articulo {
+						width: auto;
+						max-width: 120px;
+						flex: 1 1 calc(50% - (26px / 2));
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: flex-start;
+						color: var(--colorBackFondo);
+						text-align: center;
+						font-size: 82%;
+						cursor: pointer;
+						transform: scale(1);
+						transition: all 200ms ease-in-out;
+					}
+					section#destacados.clearActivo div#destacadosArticulos .articulo{
+						color: var(--colorTexto);
+					}
+					div#destacadosArticulos .articulo:hover{
+						transform: scale(1.1);
+					}
+					div#destacadosArticulos .articulo:before{
+						content: "";
+						width: 100%;
+						height: 110%;
+						position: absolute;
+						top: -5%;
+						background-color: var(--colorPrincipal);
+						border-radius: 10px;
+						opacity: .3;
+						transform-origin: 50% 100%;
+						transform: scaleY(0);
+						transition: all 300ms cubic-bezier(0.64, -0.01, 0.35, 0.99);
+					}
+					div#destacadosArticulos .articulo.activo:before{
+						opacity: .6;
+						transform: scaleY(1);
+					}
+						div#destacadosArticulos .articulo img {
+							width: 90%;
+							height: auto;
+							position: relative;
+						}
+						section#destacados.clearActivo div#destacadosArticulos .articulo img {
+							filter: invert(1);
+						}
+						div#destacadosArticulos .articulo .info {
+							position: relative;
+						}
+					div#destacadosBotones {
+						width: 100%;
+						padding: 2vh 10%;
+						font-size: 250%;
+						position: relative;
+						display: flex;
+						justify-content: space-between;
+						cursor: pointer;
+						transition: all 200ms ease-in-out;
+					}
+					div#destacadosBotones i::before{
+						color: var(--colorBackFondo);
+						transition: all 200ms ease-in-out;
+					}
+					section#destacados.clearActivo div#destacadosBotones i::before{
+						color: var(--colorTexto);
+					}
+					div#destacadosBotones i:hover::before{
+						color: var(--colorPrincipal);
+					}
+					section#destacados.clearActivo div#destacadosBotones i:hover::before{
+						color: var(--colorPrincipal);
+					}
+			
+		
 
 
 
@@ -380,7 +1084,9 @@ div#ventanaPOP {
 	Estilos para un espect ratio de 8:5
 ========================================================================== */
 @media (min-aspect-ratio: 8/5) {
-	
+	#btnMenu {
+		background-color: var(--colorBackFondo);
+	}
 }
 
 
@@ -404,14 +1110,163 @@ div#ventanaPOP {
 	}
 
 
+	section#destacados {
+		height: calc((100vw * 0.625) * 2);
+		margin-bottom: 48px;
+	}
+		div#destacadosArticulosGeneral {
+			width: 100vw;
+			position: relative;
+			left: 0;
+			align-self: center;
+			justify-content: center;
+			background-color: rgb(26 25 25 / 68%);
+			padding: 34px var(--margenGlobal);
+			margin-bottom: 3vh;
+		}
+			div#destacadosArticulos {
+				padding: 0 40px;
+				width: 100%;
+			}
+				div#destacadosArticulos .articulo {
+					flex: 1 1 0;
+				}
+			div#destacadosBotones {
+				width: calc(100vw - (var(--margenGlobal) * 2));
+				position: absolute;
+				padding: 0;
+			}
+	
+	
+		
+	
+}
+/* ==========================================================================
+	Estilos para un especto de pie pero en dispositivos pequeños
+========================================================================== */
+@media screen and (orientation:portrait) and (max-width: 760px){
+	section#destacados {
+		margin-bottom: calc(54vw + ((34px * 2) + 48px + 12px));
+	}
+	#buscarBox {
+		margin-right: 34px;
+		position: absolute;
+	}
+	section#navGlobal{
+		position: relative;
+	}
+		#infoDestcadosGlobal h1 {
+			padding: 0;
+			text-align: center;
+			justify-content: center;
+		}
+
+	
+	div#destacadosTitulo {
+		width: 38%;
+	}
+	div#destacadosInfoGlobal{
+		width: calc(100vw - (var(--margenGlobal) * 2));
+		margin-bottom: -48px;
+	}
+		
+		div#destacadosInfoBox {
+			padding: 16px 22px;
+			flex-direction: column;
+			gap: 6px;
+			align-items: flex-end;
+			justify-content: flex-end;
+			width: 100%;
+		}
+			div#destacadosInfoBox .costo {
+				padding-bottom: 0px;
+				text-align: right;
+			}
+			div#destacadosInfoBox .descripcion{
+				margin-top: 15px;
+			}
+			div#destacadosInfoBox .medidasGlobal {
+				width: 100%;
+			}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 3px;
+				}
+				div#destacadosInfoBox .medidasGlobal ul#medidas {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 16px;
+					row-gap: 1px;
+				}
+
+
+			div#destacadosArticulosGeneral {
+				position: absolute;
+				top: calc(100% + (48px + 12px));
+				background: var(--colorBackColor);
+				margin-bottom: 0px;
+			}
+				div#destacadosArticulos {
+					padding: 0 40px;
+					width: 100%;
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					gap: 14px;
+				}
+					div#destacadosArticulos .articulo {
+						width: auto;
+						flex: none;
+						min-width: inherit;
+						max-width: inherit;
+					}
+}
+
+@media screen and (orientation:portrait) and (max-aspect-ratio: 3/4) {
 	
 }
 /* ==========================================================================
 	Estilos para un especto de pie pero en dispositivos pequeños
 ========================================================================== */
 @media screen and (orientation:portrait) and (max-width: 680px){
-	
+	section#destacados {
+		margin-bottom: calc(56vw + ((34px * 2) + 48px + 12px));
+	}
 }
+
+/* ==========================================================================
+	Estilos para un especto de pie pero en dispositivos pequeños
+========================================================================== */
+@media screen and (orientation:portrait) and (max-width: 460px){
+	section#destacados {
+		margin-bottom: calc(64vw + ((34px * 2) + 48px + 12px));
+	}
+}
+
+/* ==========================================================================
+	Estilos para un especto de pie pero en dispositivos pequeños
+========================================================================== */
+@media screen and (orientation:portrait) and (max-width: 330px){
+	section#destacados {
+		margin-bottom: calc(80vw + ((34px * 2) + 48px + 12px));
+	}
+	div#destacadosInfoBox .descripcion {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+	Estilos para un especto de pie pero en dispositivos pequeños
+========================================================================== */
+@media screen and (orientation:portrait) and (max-width: 280px){
+	section#destacados {
+		margin-bottom: calc(100vw + ((34px * 2) + 48px + 12px));
+	}
+}
+
+
+
+
+
+
 
 
 
@@ -429,7 +1284,267 @@ div#ventanaPOP {
 		width: 0px !important;
 		height: 0px !important;
 		overflow: hidden !important;
-	}	
+	}
+
+}
+
+/* ==========================================================================
+	Estilos para un especto acostado pero en dispositivos medianos
+========================================================================== */
+/*(min-aspect-ratio: 24/13)*/ 
+@media screen and (orientation:landscape) and (min-aspect-ratio: 21/10){
+	div#destacadosArticulos .articulo .info,
+	div#destacadosBotones {
+		display: none;
+	}
+	div#destacadosArticulosGeneral {
+		width: calc(30% - var(--margenGlobal));
+	}
+	
+}
+
+
+
+/* ==========================================================================
+	Estilos para un especto acostado pero en dispositivos medianos
+========================================================================== */
+/*(min-aspect-ratio: 24/13)*/ 
+@media screen and (orientation:landscape) and (max-width: 990px) and (min-aspect-ratio: 13/8){
+	:root{
+		--margenGlobal: 4vw;
+	}
+	#buscarBox {
+		margin-right: 34px;
+		position: absolute;
+	}
+	section#navGlobal{
+		position: relative;
+	}
+	
+	div#destacadosInfoGlobal {
+		width: calc(100vw - (var(--margenGlobal) * 2));
+		margin-bottom: 24px;
+	}
+		div#destacadosInfoBox {
+			gap: 16px;
+		}
+			div#destacadosInfoBox .col1 {
+				width: 100%;
+				display: flex;
+				align-items: center;
+			}
+				div#destacadosInfoBox .costo {
+					white-space: nowrap;
+					padding: 4px 14px;
+				}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 4px;
+				}
+				div#destacadosInfoBox ul#medidas {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					row-gap: 1px;
+				}
+		#destacadosArticulosGeneral {
+			width: calc(26% - var(--margenGlobal));
+			bottom: auto;
+			top: 21vh;
+		}
+			div#destacadosArticulos {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+			}
+}
+
+
+
+/* ==========================================================================
+	Estilos para un especto acostado pero en dispositivos medianos
+========================================================================== */
+/*(min-aspect-ratio: 24/13)*/ 
+@media screen and (orientation:landscape) and (min-aspect-ratio: 27/10){
+	:root{
+		--margenGlobal: 4vw;
+	}
+	
+	div#destacadosInfoGlobal {
+		width: calc(100vw - (var(--margenGlobal) * 2));
+		width: auto;
+		margin-bottom: 24px;
+	}
+		div#destacadosInfoBox {
+			gap: 16px;
+		}
+			div#destacadosInfoBox .col1 {
+				width: auto;
+				display: flex;
+				align-items: center;
+			}
+				div#destacadosInfoBox .costo {
+					white-space: nowrap;
+					padding: 4px 14px;
+				}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 4px;
+				}
+				div#destacadosInfoBox ul#medidas {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					row-gap: 1px;
+				}
+		#destacadosArticulosGeneral {
+			width: calc(34.4% - var(--margenGlobal));
+			bottom: auto;
+			top: 26%;
+		}
+			div#destacadosArticulos {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+			}
+			div#destacadosInfoBox .descripcion{
+				display: none;
+			}
+}
+
+
+@media screen and (orientation:landscape) and (max-width: 990px) and (max-aspect-ratio: 8/5){
+	
+	div#destacadosInfoGlobal {
+		width: auto;
+		margin-bottom: 10px;
+		max-width: calc(100vw - (var(--margenGlobal)) * 2);
+	}
+		div#destacadosInfoBox {
+			padding: 18px;
+			gap: 10px;
+		}
+			div#destacadosInfoBox .col1 {
+				width: 100%;
+				display: flex;
+				align-items: center;
+			}
+				div#destacadosInfoBox .costo {
+					white-space: nowrap;
+					padding: 4px 14px;
+				}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 4px;
+				}
+				div#destacadosInfoBox ul#medidas {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					row-gap: 1px;
+				}
+
+	section#destacados {
+		margin-bottom: calc(16vw + (0px + 12px));
+	}
+		div#destacadosArticulosGeneral {
+			width: 100vw;
+			align-items: center;
+			justify-content: center;
+			top: calc(100% + (0px + 12px));
+			left: 0;
+			padding: 20px var(--margenGlobal);
+			background-color: var(--colorBackColor);
+			transition: all 200ms ease-in-out;
+		}
+		section#destacados.clearActivo div#destacadosArticulosGeneral {
+			background-color: var(--colorBackFondo);
+		}
+			div#destacadosArticulos {
+				width: 70%;
+				flex-wrap: nowrap;
+				position: relative;
+				z-index: 20;
+			}
+				div#destacadosArticulos .articulo .info {
+					display: none;
+				}
+			div#destacadosBotones {
+				width: calc(100vw - (var(--margenGlobal)) * 2);
+				position: absolute;
+				padding: 0;
+			}
+}
+/* ==========================================================================
+	Estilos para un especto acostado pero en dispositivos medianos
+========================================================================== */
+/*(min-aspect-ratio: 24/13)*/ 
+@media screen and (orientation:landscape) and (max-width: 990px){
+	:root{
+		--margenGlobal: 4vw;
+	}
+	div#destacadosTitulo {
+		margin-bottom: 12px;
+	}
+
+	div#destacadosArticulos .articulo .info{
+		display: none;
+	}
+	/* div#destacadosInfoGlobal {
+		width: auto;
+		margin-bottom: 10px;
+		max-width: calc(100vw - (var(--margenGlobal)) * 2);
+	} */
+		/* div#destacadosInfoBox {
+			padding: 18px;
+			gap: 10px;
+		}
+			div#destacadosInfoBox .col1 {
+				width: 100%;
+				display: flex;
+				align-items: center;
+			}
+				div#destacadosInfoBox .costo {
+					white-space: nowrap;
+					padding: 4px 14px;
+				}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 4px;
+				}
+				div#destacadosInfoBox ul#medidas {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					row-gap: 1px;
+				} */
+
+
+	/* section#destacados {
+		margin-bottom: calc(16vw + (0px + 12px));
+	}
+		div#destacadosArticulosGeneral {
+			width: 100vw;
+			align-items: center;
+			justify-content: center;
+			top: calc(100% + (0px + 12px));
+			left: 0;
+			padding: 20px var(--margenGlobal);
+			background-color: var(--colorBackColor);
+			transition: all 200ms ease-in-out;
+		}
+		section#destacados.clearActivo div#destacadosArticulosGeneral {
+			background-color: var(--colorBackFondo);
+		}
+			div#destacadosArticulos {
+				width: 70%;
+				flex-wrap: nowrap;
+				position: relative;
+				z-index: 20;
+			}
+			div#destacadosBotones {
+				width: calc(100vw - (var(--margenGlobal)) * 2);
+				position: absolute;
+				padding: 0;
+			} */
 }
 /* ==========================================================================
 	Estilos para un especto acostado pero en dispositivos medianos
@@ -446,14 +1561,81 @@ div#ventanaPOP {
 /* ==========================================================================
 	Estilos para un espect acostado pero en dispositivos chicos
 ========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 800px) and (min-aspect-ratio: 23 / 10){
+	div#destacadosInfoGlobal {
+		width: auto;
+		margin-bottom: 24px;
+	}
+		div#destacadosInfoBox {
+			gap: 16px;
+		}
+			div#destacadosInfoBox .col1 {
+				width: auto;
+				display: flex;
+				align-items: center;
+			}
+				div#destacadosInfoBox .costo {
+					white-space: nowrap;
+					padding: 4px 14px;
+				}
+				div#destacadosInfoBox .descripcion{
+					display: none;
+				}
+				div#destacadosInfoBox .medidasGlobal h4 {
+					margin-bottom: 4px;
+				}
+				div#destacadosInfoBox ul#medidas {
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 8px;
+					row-gap: 1px;
+				}
+}
 @media screen and (orientation:landscape) and (max-width: 720px){
-	
+	#buscarBox {
+		margin-right: 34px;
+		position: absolute;
+	}
+	section#navGlobal{
+		position: relative;
+	}
+	#infoDestcadosGlobal h1 {
+		padding: 0;
+		text-align: center;
+		justify-content: center;
+	}
+}
+/* ==========================================================================
+	Estilos para un espect acostado pero en dispositivos muy chicos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 667px){
+	div#destacadosInfoBox {
+		flex-direction: row;
+		padding: 10px 16px;
+	}
+		div#destacadosInfoBox .col1 {
+			width: auto;
+		}
+			div#destacadosInfoBox .descripcion{
+				display: none;
+			}
+}
+/* ==========================================================================
+	Estilos para un espect acostado pero en dispositivos muy chicos
+========================================================================== */
+@media screen and (orientation:landscape) and (max-width: 560px){
+	div#destacadosTitulo span,
+	div#destacadosTitulo h2,
+	div#destacadosInfoBox .medidasGlobal{
+		display: none;
+	}
 }
 /* ==========================================================================
 	Estilos para un espect acostado pero en dispositivos muy chicos
 ========================================================================== */
 @media screen and (orientation:landscape) and (max-height: 460px){
-
+	
 }
 
 
@@ -529,9 +1711,7 @@ div#ventanaPOP {
 	Media Queries
 ========================================================================== */
 @media only screen and (max-width: 846px) {
-	:root{
-		--margenGlobal: 8vw;
-	}
+	
 }
 
 
@@ -607,15 +1787,12 @@ div#ventanaPOP {
 	Media Queries
 ========================================================================== */
 @media only screen and (max-width: 370px) {
-	
+	div#destacadosTitulo {
+		width: 42%;
+		margin-bottom: 15px;
+	}
+		div#destacadosTitulo h3 {
+			font-size: 250%;
+			line-height: 1;
+		}
 }
-
-
-
-
-
-
-
-
-
-

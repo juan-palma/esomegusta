@@ -9,6 +9,36 @@ class Precarga{
 	imgDelay = [];
 	delayLoad = false;
 
+	elementsStanBy;
+	stanByTotal = 0;
+	stanByLoad = 0;
+	useStanByFunc;
+
+	stanbyCheck(e){
+		this.stanByLoad++;
+		if(this.stanByTotal == this.stanByLoad){
+			if(this.useStanByFunc instanceof Function){
+				this.useStanByFunc();
+			}
+		}
+	}
+	stanby(a){
+		this.elementsStanBy = a;
+		//this.preLoadFind = this.elementsPre.length;
+		const miDOM = document.createDocumentFragment();
+		this.elementsStanBy.forEach((function(pre){
+			const tag = document.createElement('img');
+			if(pre.hasOwnProperty('srcset')){
+				tag.srcset = pre.srcset;
+			} else{
+				tag.src = pre.img;
+			}
+			tag.onload = this.stanbyCheck.bind(this);
+			miDOM.appendChild(tag);
+			this.stanByTotal++;
+		}).bind(this));
+	}
+
 	showPreloadDealy(){
 		this.imgDelay.forEach(function(pre){
 			if(pre.hasAttribute('preload-srcset')){
@@ -101,7 +131,13 @@ class Precarga{
 			
 		}).bind(this));
 		this.preLoadFind = this.preloadTotal;
+		if(this.preloadTotal <= 0){
+			if(this.userFunc instanceof Function){
+				this.userFunc();
+			}
+		}
 	}
+	
 
 	constructor(f){
 		if(f instanceof Function){

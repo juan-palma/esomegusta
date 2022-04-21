@@ -14,7 +14,7 @@
 		<link rel="icon" href="favicon.ico?v1" />
 		<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 				
-		<title>TITULO</title>
+		<title>Eso me gusta</title>
 		<meta name="description" content="DESCRIPCION"></meta>
 
 		<!-- PWA APP Startup configuration -->
@@ -92,6 +92,103 @@
 
 		
 		<!-- Tu codigo aqui... -->
+		<header id="mainHeader" class="container">
+			<section id="navGlobal">
+				<div id="logo">
+					<img src="assets/img/es-me-gusta-logo.svg" alt="Eso Me Gusta - Logo" width="80" height="80">
+				</div>
+				<div id="accionBox">
+					<form id="buscarBox">
+						<div class="boxInput" data-validar="text">
+							<div class="inputEfect">
+								<input type="text" id="buscar" name="buscar" class="input" autocomplete="on" value="" placeholder="Buscar" required="">
+								<div class="efectoLinea"></div>
+								<div id="btnBuscar" class="">
+									<img class="cuadroGuiaH" src="assets/img/cuadro.webp" alt="cuadro guia" width="10" height="10">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</div>
+							</div>
+							<div class="inputError"></div>
+						</div>
+					</form>
+					<div id="btnMenu"><i class="fa-solid fa-bars"></i></div>
+				</div>
+				<nav id="menuGlobal">
+					<ul id="menuBox"></ul>
+				</nav>
+			</section>
+			
+			<section id="destacados" class="anchoFullFlex">
+				<img src="assets/img/home_inicio/fondo_dark.webp" alt="Fondo de simulacion Oscuro" width="1600" height="1000">
+				<img class="clear" src="assets/img/home_inicio/fondo_clear.webp" alt="Fondo de simulacion Claro" width="1600" height="1000">
+				<img id="escenario" src="assets/img/home_inicio/fondo_oculto.webp" alt="Fondo de simulacion decoracion" width="1600" height="1000">
+				<img src="assets/img/home_inicio/fondo_silla.webp" alt="Fondo de simulacion Claro" width="1600" height="1000">
+				<div id="infoDestcadosGlobal">
+					<div id="destacadoMontajeBox">
+						<img class="cuadroGuiaH" src="assets/img/home_inicio/dm-cuadro_guia.webp" alt="cuadro guia" width="1112" height="1000">
+						<!-- <img class="montaje" src="" alt="muestra de montaje 1" width="1112" height="1000">
+						<img class="montaje anterior" src="" alt="muestra de montaje 2" width="1112" height="1000">
+						<img class="montaje siguiente" src="" alt="muestra de montaje 3" width="1112" height="1000"> -->
+					</div>
+
+					<h1>Eso me gusta.mx</h1>
+
+					<div id="destacadosControlTheme">
+						<div id="soloArte" class="controlTheme">
+							<i class="fa-solid fa-paint-roller"></i>
+						</div>
+						<div id="dark" class="controlTheme">
+							<span>Oscuro</span>
+							<div class="colorTheme"></div>
+						</div>
+						<div id="clear" class="controlTheme">
+							<span>Claro</span>
+							<div class="colorTheme"></div>
+						</div>
+					</div>
+
+					<div id="destacadosTitulo">
+						<span></span>
+						<h2></h2>
+						<h3></h3>
+					</div>
+
+					<div id="destacadosInfoGlobal">
+						<div id="destacadosInfoBox">
+							<div class="col1">
+								<div class="costo">
+									desde: <span class="precio"></span>.<span class="centavos"></span>
+								</div>
+								<div class="descripcion">
+
+								</div>
+							</div>
+							<div class="medidasGlobal">
+								<h4>Tamaños cm:</h4>
+								<ul id="medidas">
+									<!-- <li class="medida">h:<span class="resaltar">15</span> w:<span class="resaltar">8</span></li> -->
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="destacadosArticulosGeneral">
+						<div id="destacadosArticulos">
+							<!-- <div class="articulo activo" data-sku="goku">
+								<img class="montaje" src="assets/img/home_inicio/ico-dm-geek-kakaroto-goku.webp" alt="articulo de montaje 1" width="60" height="60">
+								<div class="info">Goku Pasado y Presente</div>
+							</div> -->
+						</div>
+						<div id="destacadosBotones">
+							<i id="btnMontajeBack" class="fa-solid fa-caret-left"></i>
+							<i id="btnMontajeNext" class="fa-solid fa-caret-right"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			
+		</header>
 		
 
 		

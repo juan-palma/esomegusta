@@ -729,7 +729,7 @@ div#ventanaPOP {
 					}
 				#overDestacados{
 					width: 100%;
-					height: calc(100vw * 0.625);
+					height: 100%;
 					max-height: 100vh;
 					position: absolute;
 					top: 0;

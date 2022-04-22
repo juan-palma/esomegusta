@@ -741,11 +741,10 @@ div#ventanaPOP {
 						object-fit: cover;
 						object-position: calc(50% + 28%) top;
 						position: absolute;
-						transition: all 350ms ease-in-out;
+						transition: all 1s cubic-bezier(0.64, -0.01, 0.35, 0.99);
 					}
 					#escenario{
 						opacity: 0;
-						transition: all 1.5s cubic-bezier(0.64, -0.01, 0.35, 0.99);
 					}
 					section#destacados.soloArte #escenario{
 						opacity: 1;

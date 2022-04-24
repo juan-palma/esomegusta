@@ -20,7 +20,7 @@ const destacadosInfo = [
 			{h:15, w:8},
 			{h:30, w:16},
 			{h:60, w:32},
-			{h:100, w:853},
+			{h:100, w:85.3},
 			{h:150, w:79.4}
 		],
 		producType:"Vinil Adhesivo",
@@ -35,15 +35,15 @@ const destacadosInfo = [
 		nombre:"Gym Bed Life go Hard",
 		img:{name:"dm-f-gym-bed-life", format:"webp"},
 		ico: {name:"ico-dm-f-gym-bed-life", format:"webp"},
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		desc:"Vinil adhesivo mate o brillante con tematica GYM, para motivarte a realizar esa rutia sin pretextos :)",
 		costo:{u:150, c:'00'},
 		descuento:"null",
 		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:853},
-			{h:150, w:79.4}
+			{h:15, w:12.7},
+			{h:30, w:25.4},
+			{h:60, w:50.8},
+			{h:100, w:84.3},
+			{h:150, w:127.2}
 		],
 		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
@@ -57,15 +57,15 @@ const destacadosInfo = [
 		nombre:"En los momentos Obscuros 1",
 		img:{name:"dm-f-momentos-obscuros", format:"webp"},
 		ico: {name:"ico-dm-f-momentos-obscuros", format:"webp"},
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		desc:"Vinil adhesivo mate o brillante con frase 'Es durant nuestros momentos más oscuros cuando tenemos que centrarnos para ver la luz' y la figura de una luna y un lobo sobre un risco",
 		costo:{u:150, c:'00'},
 		descuento:"null",
 		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:853},
-			{h:150, w:79.4}
+			{h:11.9, w:15},
+			{h:23.8, w:30},
+			{h:47.7, w:60},
+			{h:79.5, w:100},
+			{h:119.2, w:150}
 		],
 		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
@@ -79,15 +79,15 @@ const destacadosInfo = [
 		nombre:"Majora's Mask - Zelda",
 		img:{name:"dm-geek-majora-s-mask", format:"webp"},
 		ico: {name:"ico-dm-geek-majora-s-mask", format:"webp"},
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		desc:"Vinil adhesivo mate o brillante con tematica de Zelda, La iconica Majora's Mask del videojuego. ",
 		costo:{u:150, c:'00'},
 		descuento:"null",
 		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:853},
-			{h:150, w:79.4}
+			{h:12.6, w:15},
+			{h:25.2, w:30},
+			{h:50.5, w:60},
+			{h:84.1, w:100},
+			{h:126.2, w:150}
 		],
 		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
@@ -101,15 +101,15 @@ const destacadosInfo = [
 		nombre:"Pleitesía de la que da alegría",
 		img:{name:"dm-d-chica-de-rodillas", format:"webp"},
 		ico: {name:"ico-dm-d-chica-de-rodillas", format:"webp"},
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		desc:"Vinil adhesivo mate o brillante con tematica  sensual - erotica de una chica rubia de rodillas desnuda.",
 		costo:{u:150, c:'00'},
 		descuento:"null",
 		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:853},
-			{h:150, w:79.4}
+			{h:15, w:9.4},
+			{h:30, w:18.8},
+			{h:60, w:37.6},
+			{h:100, w:62.7},
+			{h:150, w:94.1}
 		],
 		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
@@ -123,15 +123,15 @@ const destacadosInfo = [
 		nombre:"Kill Bill Gogo Yubari",
 		img:{name:"dm-geek-kill-bill-gogo", format:"webp"},
 		ico: {name:"ico-dm-geek-kill-bill-gogo", format:"webp"},
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		desc:"Vinil adhesivo mate o brillante con tematica de la pelicula Kill Bill, el personaje de Gogo Yubari la chica peleadora con la bola con picos.",
 		costo:{u:150, c:'00'},
 		descuento:"null",
 		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:853},
-			{h:150, w:79.4}
+			{h:14.2, w:15},
+			{h:28.5, w:30},
+			{h:57.1, w:60},
+			{h:95.2, w:100},
+			{h:142.9, w:150}
 		],
 		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
@@ -140,8 +140,646 @@ const destacadosInfo = [
 			'Movie', 'Kill Bill', 'Gogo Yubari'
 		]
 	}
-]
+];
 
+
+
+const productos = [
+	{
+		categoria: 'geek',
+		categoriaID: '01',
+		productos: [
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'true', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		}
+		]
+	},
+
+
+	{
+		categoria: 'frases',
+		categoriaID: '02',
+		productos: [
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		}
+		]
+	},
+
+
+	{
+		categoria: 'naturaleza',
+		categoriaID: '03',
+		productos: [
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		},
+		{
+			sku:"0101geek010101m01",
+			nombre:"Goku Pasado y Presente",
+			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+			costo:{u:150, c:'00'},
+			descuento:[
+				{tipo:'2x1', costo:'150.00'},
+				{tipo:'rebaja', costo:'140'}
+			],
+			size:[
+				{h:15, w:8},
+				{h:30, w:16},
+				{h:60, w:32},
+				{h:100, w:85.3},
+				{h:150, w:79.4}
+			],
+			producType:"Vinil Adhesivo",
+			producTypeSuB:["Decorativo"],
+			cat:"Geek",
+			CatSub:[
+				'Anime', 'Dragon Ball', 'Goku'
+			],
+			propios:[
+				{nombre:'invertido', valor:'true'}
+			],
+			user:{
+				commprado: {status:'false', cantidad:0},
+				carrito: {status:'false', cantidad:0},
+				favoritos: {status:'false', lista:['me-gusta']}
+			}
+		}
+		]
+	}
+];
 
 
 
@@ -188,18 +826,8 @@ function buscar(e){
 	e.preventDefault();
 	console.log('buscando...');
 }
-
-//colorThemeActivo = 'dark';
 function colorTheme(){
 	el.destacados.classList.toggle('clearActivo');
-	// if(colorThemeActivo == this.id){ return; }
-	// if(this.id == 'clear'){
-	// 	el.destacados.classList.add('clearActivo');
-	// 	colorThemeActivo = this.id;
-	// } else{
-	// 	el.destacados.classList.remove('clearActivo');
-	// 	colorThemeActivo = this.id;
-	// }
 }
 
 
@@ -446,6 +1074,57 @@ function iniciarDestacados(){
 }
 
 
+function loadProductos(){
+	productos.forEach((c, i) => {
+		const seccion = document.createElement('section');
+		seccion.id = 'key-' + c.categoria.replace(/\s/g, '').trim().toLowerCase();
+		const h2 = document.createElement('h2');
+		h2.textContent = c.categoria.replace(/^[a-zA-ZñÑ]/, l => l.toUpperCase());
+
+		const boxProductos = document.createElement('div');
+		boxProductos.classList.add('boxProductos');
+		c.productos.forEach((p, i) => {
+
+			const producto = document.createElement('figure');
+			producto.classList.add('producto');
+			p.propios.forEach(pro => {
+				if(pro.valor == 'true'){
+					producto.classList.add(pro.nombre);
+				}
+			});
+			
+			const like = (p.user.favoritos.status == 'true') ? 'megusta' : '';
+			producto.innerHTML = `
+				<div class="pLike">
+					<div class="corazon ${like}"><i class="fa-solid fa-heart"></i></div>
+					<div class="masCarrito" data-sku="${p.sku}"><i class="fa-solid fa-plus"></i></div>
+				</div>
+				<a href="/producto/${p.sku}" class="pContenedor">
+					<img src="${el.urlDestacados}${p.ico.name}.${p.ico.format}" width="80" height="80" />
+					<figcaption>
+						${p.nombre}
+					</figcaption>
+				</a>
+				<div class="pAccion">
+					<div class="pPrecio">${p.costo.u}.${p.costo.c}</div>
+					<a href="/producto/${p.sku}" class="pBtnVer">Más</a>
+				</div>
+			`;
+			boxProductos.appendChild(producto)
+		});
+
+		const footer = document.createElement('footer');
+		footer.innerHTML = `<a href="/categoria/${c.categoriaID}">Ver todo</a>`
+
+		seccion.appendChild(h2);
+		seccion.appendChild(boxProductos);
+		seccion.appendChild(footer);
+
+		el.boxCatgoriasProductos.appendChild(seccion);
+	});
+	
+}
+
 
 function iniciar() {
 	window.bodymovin = arguments[1];
@@ -528,6 +1207,9 @@ function iniciar() {
 	});
 	el.precarga.useStanByFunc = iniciarDestacados;
 	el.precarga.stanby(extraIMG);
+
+	el.boxCatgoriasProductos = document.getElementById('boxCatgoriasProductos');
+	setTimeout(loadProductos, 100);
 
 
 

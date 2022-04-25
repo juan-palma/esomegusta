@@ -464,6 +464,7 @@ div#ventanaPOP {
 		}
 			.boxInput .iconoStatus i:before{
 				transition: all 200ms ease-in-out;
+				color: transparent;
 			}
 	.boxInput .inputError {
 		width: 100%;
@@ -1522,7 +1523,7 @@ div#footerGeneral {
 	}
 	div#destacadosTitulo{
 		width: 32%;
-		right: calc(var(--margenGlobal) * -1);
+		right: 0;
 		border-bottom-right-radius: 0;
 		border-top-right-radius: 0;
 		margin-bottom: 12px;

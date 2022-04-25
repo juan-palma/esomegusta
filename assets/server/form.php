@@ -43,13 +43,13 @@ $mensajeError = [];
 $valores = new stdClass();
 $valores->nombre = trim($_POST['fNombre']);
 $valores->mail = trim($_POST['fMail']);
-$valores->tel = trim($_POST['fTel']);
+//$valores->tel = trim($_POST['fTel']);
 $valores->mensaje = trim($_POST['fMensaje']);
 
 
 if(preg_match($exp_reg->text->exp, $valores->nombre) == 1){ $procesado = false; $mensajeError[] = "El nombre tiene catacteres no validos"; }
 if(preg_match($exp_reg->mail->exp, $valores->mail) == 0){ $procesado = false; $mensajeError[] = "No es un correo valido"; }
-if(preg_match($exp_reg->tel->exp, $valores->tel) == 0){ $procesado = false; $mensajeError[] = "No es un numero telefonico valido"; }
+//if(preg_match($exp_reg->tel->exp, $valores->tel) == 0){ $procesado = false; $mensajeError[] = "No es un numero telefonico valido"; }
 if(preg_match($exp_reg->richText->exp, $valores->mensaje) == 1){ $procesado = false; $mensajeError[] = "El texto tiene catacteres no validos"; }
 
 
@@ -60,14 +60,13 @@ if(preg_match($exp_reg->richText->exp, $valores->mensaje) == 1){ $procesado = fa
 if($procesado){
 	$valores->nombre = filter_var($valores->nombre, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$valores->mail = filter_var($valores->mail, FILTER_SANITIZE_EMAIL);
-	$valores->tel = filter_var($valores->tel, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	//$valores->tel = filter_var($valores->tel, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$valores->mensaje = filter_var($valores->mensaje, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$valores->mensaje = preg_replace('/[\n]/', '<br />', $valores->mensaje);
 
 	$mensajeTextoPlano = "
 		Usuario: $valores->nombre\n\r
 		Correo: $valores->mail\n\r
-		Teléfono: $valores->tel\n\r
 		\n\r
 		Mensaje:\n\r
 		$valores->mensaje
@@ -80,7 +79,6 @@ if($procesado){
 		<body>
 			Usuario: $valores->nombre<br />
 			Correo: $valores->mail<br />
-			Teléfono: $valores->tel<br />
 			<br />
 			Mensaje:<br />
 			$valores->mensaje
@@ -103,7 +101,7 @@ if($procesado){
 		$mail->Port       = 465;
 		//Recipients
 		$mail->setFrom('juan.palma@idalibre.com', 'Juan Palma');
-		$mail->addAddress('juan.palma@idalibre.com', 'Portafolio Juan Palma');
+		$mail->addAddress('juan.palma@idalibre.com', 'Juan Palma');
 		$mail->addReplyTo('juan.palma@idalibre.com', 'Juan Palma');
 		$mail->addCC('juan.palma@me.com');
 		//$mail->addBCC('bcc@example.com');
@@ -111,7 +109,7 @@ if($procesado){
 	
 		//Content
 		$mail->isHTML(true);
-		$mail->Subject = 'Contacto Portafolio Juan Palma';
+		$mail->Subject = 'Contacto Eso me gusta';
 		$mail->Body    = $mensajeTextoHTML;
 		$mail->AltBody = $mensajeTextoPlano;
 	

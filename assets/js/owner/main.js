@@ -1126,6 +1126,33 @@ function loadProductos(){
 }
 
 
+let fPv = "";
+let enviandoForm = false;
+function formulario(e){
+	e.preventDefault();
+	if(enviandoForm){ return; }
+
+	function enviado(j){
+		el.fPv.clear();
+		pop('Gracias por contactarnos, tu correo fue enviado y en breve me pondre en contacto contigo.', 'ok');
+		enviandoForm = false;
+	}
+
+	function error(j){
+		pop('No se puedo enviar el correo, intentolo mas tarde.', 'error');
+		enviandoForm = false;
+	}
+
+	if(el.fPv.validar()){
+		const formData = new FormData(el.form);
+		enviandoForm = true;
+		request('assets/server/form.php', formData, enviado, error);
+	} else{
+		pop('El formulario tiene errores que se deben corregir.', 'alert');
+	}
+}
+
+
 function iniciar() {
 	window.bodymovin = arguments[1];
 	window.anime = arguments[2];
@@ -1224,11 +1251,11 @@ function iniciar() {
 
 
 	//Activar las validaciones para el formulario
-	// el.form = document.getElementById('form');
-	// el.form.addEventListener('submit', formulario);
-	// el.fPv = new ValidarForm();
-	// el.fPv.form = el.form;
-	// el.fPv.run();
+	el.form = document.getElementById('footerForm');
+	el.form.addEventListener('submit', formulario);
+	el.fPv = new ValidarForm();
+	el.fPv.form = el.form;
+	el.fPv.run();
 
 }
 

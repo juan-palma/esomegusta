@@ -109,7 +109,7 @@ class ValidarForm{
 	}
 	
 	run(){
-		this.campos = form.querySelectorAll('[data-validar]');
+		this.campos = this.form.querySelectorAll('[data-validar]');
 		this.campos.forEach((i) => {
 			i.idaData = {};
 			i.idaData.reg = i.attributes['data-validar'].value;

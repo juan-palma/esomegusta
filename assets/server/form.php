@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\SMTP;
 //use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable( dirname(dirname(__DIR__)) );
+$dotenv = Dotenv\Dotenv::createImmutable( dirname(dirname(dirname(__DIR__))) );
 $dotenv -> load();
 
 //Variables globales

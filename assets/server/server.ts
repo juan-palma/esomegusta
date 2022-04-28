@@ -2,11 +2,11 @@ import { Application, oakCors, green, yellow } from "./deps.ts";
 import todoRouter from "./routes/todo.ts";
 
 const app = new Application();
-const port:number = 8000;
+const port:number = 1993;
 
 app.use(
 	oakCors({
-		origin: /^.+localhost:8000|esomegusta:7890$/,
+		origin: /^.+localhost:1993|esomegusta:7890|esomegusta.idalibre.com$/,
 		optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 	}),
 );

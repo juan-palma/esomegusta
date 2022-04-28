@@ -4,6 +4,8 @@ import { Application } from "./deps.ts";
 import { green, yellow } from "./deps.ts";
 import todoRouter from "./routes/todo.ts";
 
+console.log('hola mundo');
+
 const app = new Application();
 const port: number = 8000;
 

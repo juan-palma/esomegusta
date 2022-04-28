@@ -794,7 +794,7 @@ function showPage(){
 	hideLoading(100);
 
 	//Tu codigo aqui...
-};
+}
 
 
 function hideLoading(time=1050){
@@ -840,9 +840,9 @@ el.destacadoActivo = 0;
 el.destacadoActivoOld = 0;
 el.destacadoactivoEl = null;
 el.destacadoRun = false;
-function activarDestacados(e){
+function activarDestacados(){
 	if(el.destacadoRun){ return; }
-	if(el.destacadoActivo == this.idaData.objeto){ return; };
+	if(el.destacadoActivo == this.idaData.objeto){ return; }
 	el.destacadoRun = true;
 	el.destacadoActivoEl.classList.remove('activo');
 	el.destacadoActivoOld = el.destacadoActivo;
@@ -1075,7 +1075,7 @@ function iniciarDestacados(){
 
 
 function loadProductos(){
-	productos.forEach((c, i) => {
+	productos.forEach(c => {
 		const seccion = document.createElement('section');
 		seccion.id = 'key-' + c.categoria.replace(/\s/g, '').trim().toLowerCase();
 		const h2 = document.createElement('h2');
@@ -1083,7 +1083,7 @@ function loadProductos(){
 
 		const boxProductos = document.createElement('div');
 		boxProductos.classList.add('boxProductos');
-		c.productos.forEach((p, i) => {
+		c.productos.forEach(p => {
 
 			const producto = document.createElement('figure');
 			producto.classList.add('producto');
@@ -1126,19 +1126,20 @@ function loadProductos(){
 }
 
 
-let fPv = "";
 let enviandoForm = false;
 function formulario(e){
 	e.preventDefault();
 	if(enviandoForm){ return; }
 
 	function enviado(j){
+		console.log(j);
 		el.fPv.clear();
 		pop('Gracias por contactarnos, tu correo fue enviado y en breve me pondre en contacto contigo.', 'ok');
 		enviandoForm = false;
 	}
 
 	function error(j){
+		console.log(j);
 		pop('No se puedo enviar el correo, intentolo mas tarde.', 'error');
 		enviandoForm = false;
 	}
@@ -1161,7 +1162,7 @@ function iniciar() {
 	//habilitar funciones para moviles:
 	if ((el.mobile = /Mobile/i.test(navigator.userAgent))) {
 		if ((el.touch = Modernizr.touchevents)) {
-
+			console.log('is touche');
 		}
 	}
 
@@ -1257,6 +1258,23 @@ function iniciar() {
 	el.fPv.form = el.form;
 	el.fPv.run();
 
+
+	const myHeaders = new Headers({
+		"Content-Type": "text/plain"
+	});
+	const myInit = {
+		method: 'GET',
+		headers: myHeaders,
+		mode: 'cors',
+		cache: 'default'
+	}
+	const myRequest = new Request('http://localhost:8000/todo/', myInit);
+
+	fetch(myRequest)
+	.then(response => {
+		console.log(response);
+	})
+	
 }
 
 

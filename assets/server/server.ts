@@ -1,14 +1,15 @@
-// import { Application, Router } from "https://deno.land/x/oak/mod.ts";
-// import { green, yellow } from "https://deno.land/std@0.53.0/fmt/colors.ts";
-import { Application } from "./deps.ts";
-import { green, yellow } from "./deps.ts";
+import { Application, oakCors, green, yellow } from "./deps.ts";
 import todoRouter from "./routes/todo.ts";
 
-console.log('hola mundo');
-
 const app = new Application();
-const port: number = 8000;
+const port:number = 8000;
 
+app.use(
+	oakCors({
+		origin: /^.+localhost:8000|esomegusta:7890$/,
+		optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+	}),
+);
 app.use(todoRouter.routes());
 app.use(todoRouter.allowedMethods());
 

@@ -1,10 +1,9 @@
-import {v4} from "../deps.ts";
 import Todo from '../interfaces/Todo.ts';
 import todos from '../stubs/todos.ts';
 
 
 export default {
-	getAllTodos: ({ response }: { response: any }) => {
+	getAllTodos: ({ response }: { response:any  }) => {
 		response.status = 200;
 		response.body = {
 			success: true,
@@ -24,12 +23,12 @@ export default {
 
 		//New data added.
 		const values = await body.value;
-		let newTodo:Todo = {
-			id: v4.generate(),
+		const newTodo:Todo = {
+			id: globalThis.crypto.randomUUID(),
 			todo: values.todo,
 			isCompleted: false
 		}
-		let data = [...todos, newTodo];
+		const data = [...todos, newTodo];
 		response.status = 200;
 		response.body = {
 			success: true,
@@ -71,7 +70,7 @@ export default {
 		const value = await body.value;
 
 		const updateData:{todo?:string; isCompleted?:boolean} = value;
-		let newTodos = todos.map(t => {
+		const newTodos = todos.map(t => {
 			return t.id === params.id ? {...t, ...updateData} : t;
 		});
 

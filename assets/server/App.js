@@ -14,6 +14,7 @@ app.use(express.json());
 //Nuestro primer WS Get
 app.get('/', (req, res) => {
 	res.json({"Titulo":"Hola mundo"});
+	console.log(req);
 });
 
 //Iniciando el servior

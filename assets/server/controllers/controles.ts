@@ -1,15 +1,17 @@
+import getAllProductos from "./functions/getAllProductos.ts";
 import Todo from '../interfaces/Todo.ts';
 import todos from '../stubs/todos.ts';
 
 
 export default {
-	getAllTodos: ({ response }: { response:any  }) => {
-		response.status = 200;
-		response.body = {
-			success: true,
-			data: todos
-		};
-	},
+	getAllProductos: getAllProductos,
+	// getAllProductos: ({ response }: { response:any  }) => {
+	// 	response.status = 200;
+	// 	response.body = {
+	// 		success: true,
+	// 		data: todos
+	// 	};
+	// },
 	createTodo: async ({request, response}:{request:any, response:any}) => {
 		const body = await request.body();
 		if(!request.hasBody){
@@ -82,7 +84,6 @@ export default {
 	},
 	deleteTodoById: ({params, response}:{params:{id:string}, response:any}) => {
 		const allTodos = todos.filter(t => t.id !== params.id);
-		console.log(allTodos);
 
 		response.status = 200;
 		response.body = {

@@ -9,13 +9,23 @@ const el = idagl.elementos;
 
 const destacadosInfo = [
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"Goku Pasado y Presente",
-		img:{name:"dm-geek-kakaroto-goku", format:"webp"},
+		img:{name:"img-geek-kakaroto-goku", format:"webp"},
 		ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
+		monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+		imgGalery:[
+			{name:"img-geek-kakaroto-gokuo", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
+		descShort:"Vinil adhesivo mate o brillante Dragon Ball - Goku Niño y Adulto",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:15, w:8},
 			{h:30, w:16},
@@ -23,21 +33,36 @@ const destacadosInfo = [
 			{h:100, w:85.3},
 			{h:150, w:79.4}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"Geek",
 		CatSub:[
 			'Anime', 'Dragon Ball', 'Goku'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	},
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"Gym Bed Life go Hard",
-		img:{name:"dm-f-gym-bed-life", format:"webp"},
+		img:{name:"img-f-gym-bed-life", format:"webp"},
 		ico: {name:"ico-dm-f-gym-bed-life", format:"webp"},
+		monaje:{name:"dm-f-gym-bed-life", format:"webp"},
+		imgGalery:[
+			{name:"img-f-gym-bed-life", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con tematica GYM, para motivarte a realizar esa rutia sin pretextos :)",
+		descShort:"Vinil adhesivo mate o brillante Motivacion GYM.",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:15, w:12.7},
 			{h:30, w:25.4},
@@ -45,21 +70,36 @@ const destacadosInfo = [
 			{h:100, w:84.3},
 			{h:150, w:127.2}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"Frases",
 		CatSub:[
 			'Motivacional', 'gym'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	},
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"En los momentos Obscuros 1",
-		img:{name:"dm-f-momentos-obscuros", format:"webp"},
+		img:{name:"img-f-momentos-obscuros", format:"webp"},
 		ico: {name:"ico-dm-f-momentos-obscuros", format:"webp"},
+		monaje:{name:"dm-f-momentos-obscuros", format:"webp"},
+		imgGalery:[
+			{name:"img-f-momentos-obscuros", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con frase 'Es durant nuestros momentos más oscuros cuando tenemos que centrarnos para ver la luz' y la figura de una luna y un lobo sobre un risco",
+		descShort:"Vinil adhesivo mate o brillante frase 'momentos más oscuros'.",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:11.9, w:15},
 			{h:23.8, w:30},
@@ -67,21 +107,36 @@ const destacadosInfo = [
 			{h:79.5, w:100},
 			{h:119.2, w:150}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"Frases",
 		CatSub:[
 			'Motivacional', 'momentos', 'obscuros'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	},
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"Majora's Mask - Zelda",
-		img:{name:"dm-geek-majora-s-mask", format:"webp"},
+		img:{name:"img-geek-majora-s-mask", format:"webp"},
 		ico: {name:"ico-dm-geek-majora-s-mask", format:"webp"},
+		monaje:{name:"dm-geek-majora-s-mask", format:"webp"},
+		imgGalery:[
+			{name:"img-geek-majora-s-mask", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con tematica de Zelda, La iconica Majora's Mask del videojuego. ",
+		descShort:"Vinil adhesivo mate o brillante de Zelda Majora's Mask.",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:12.6, w:15},
 			{h:25.2, w:30},
@@ -89,21 +144,36 @@ const destacadosInfo = [
 			{h:84.1, w:100},
 			{h:126.2, w:150}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"Geek",
 		CatSub:[
 			'Game', 'Zelda', 'Majora\'s Mask'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	},
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"Pleitesía de la que da alegría",
-		img:{name:"dm-d-chica-de-rodillas", format:"webp"},
+		img:{name:"img-d-chica-de-rodillas", format:"webp"},
 		ico: {name:"ico-dm-d-chica-de-rodillas", format:"webp"},
+		monaje:{name:"dm-d-chica-de-rodillas", format:"webp"},
+		imgGalery:[
+			{name:"img-geek-kill-bill-gogo", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con tematica  sensual - erotica de una chica rubia de rodillas desnuda.",
+		descShort:"Vinil adhesivo mate o brillante Plitesia - Sensual - Erotico.",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:15, w:9.4},
 			{h:30, w:18.8},
@@ -111,21 +181,36 @@ const destacadosInfo = [
 			{h:100, w:62.7},
 			{h:150, w:94.1}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"sensual",
 		CatSub:[
 			'Sensual', 'Mujeres', 'Pleiteisa 1'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	},
 	{
+		categoria: 'geek',
+		producType:"Vinil Adhesivo",
 		sku:"0101geek010101m01",
 		nombre:"Kill Bill Gogo Yubari",
-		img:{name:"dm-geek-kill-bill-gogo", format:"webp"},
+		img:{name:"img-geek-kill-bill-gogo", format:"webp"},
 		ico: {name:"ico-dm-geek-kill-bill-gogo", format:"webp"},
+		monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
+		imgGalery:[
+			{name:"img-geek-kill-bill-gogo", format:"webp"}
+		],
 		desc:"Vinil adhesivo mate o brillante con tematica de la pelicula Kill Bill, el personaje de Gogo Yubari la chica peleadora con la bola con picos.",
+		descShort:"Vinil adhesivo mate o brillante Kill Bill - Gogo Yubari.",
 		costo:{u:150, c:'00'},
-		descuento:"null",
+		descuento:[
+			{tipo:'2x1', costo:'150.00'},
+			{tipo:'rebaja', costo:'140'}
+		],
 		size:[
 			{h:14.2, w:15},
 			{h:28.5, w:30},
@@ -133,11 +218,16 @@ const destacadosInfo = [
 			{h:95.2, w:100},
 			{h:142.9, w:150}
 		],
-		producType:"Vinil Adhesivo",
 		producTypeSuB:["Decorativo"],
 		cat:"Geek",
 		CatSub:[
 			'Movie', 'Kill Bill', 'Gogo Yubari'
+		],
+		destacado:[
+			'destacados'
+		],
+		particularidad:[
+			{nombre:'invertido', valor:'true'}
 		]
 	}
 ];
@@ -147,7 +237,7 @@ const destacadosInfo = [
 const productos = [
 	{
 		categoria: 'geek',
-		categoriaID: '01',
+		productoTypo: 'recorte',
 		productos: [
 		{
 			sku:"0101geek010101m01",

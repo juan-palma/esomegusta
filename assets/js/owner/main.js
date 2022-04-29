@@ -1358,7 +1358,7 @@ function iniciar() {
 		mode: 'cors',
 		cache: 'default'
 	}
-	const myRequest = new Request('http://localhost:1993/todo/', myInit);
+	const myRequest = new Request('http://localhost:1993/producto/', myInit);
 
 	fetch(myRequest)
 	.then(response => {

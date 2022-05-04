@@ -558,7 +558,7 @@ function iniciar() {
 		const categorias = response.data;
 		categorias.forEach(c => {
 			//Preparar la ruta y generar los fetch para las promesas.
-			const myRequestBy = new Request(`http://localhost:1993/categorias/${c}`, myInit);
+			const myRequestBy = new Request(`http://localhost:1993/categorias/${c}/6`, myInit);
 			productoByCat.push(fetch(myRequestBy));
 
 			//Creando los elementos e categoria del menu.

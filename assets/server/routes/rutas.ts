@@ -12,7 +12,7 @@ router
 	// .delete("/producto/:id", controles.deleteTodoById)
 	.get("/destacados", controles.getAllDestacados)
 	.get("/categorias", controles.getAllCategorias)
-	.get("/categorias/:name", controles.getAllCategoriasByName)
+	.get("/categorias/:name/:limite?", controles.getAllCategoriasByName)
 	.get("/find/:text", controles.getFind)
 ;
 

@@ -51,6 +51,6 @@ export default interface PlantillaProducto {
 	size?:JSON[],
 	producTypeSuB?:Record<string, unknown>,
 	CatSub?:Record<string, unknown>,
-	destacado?:Record<string, unknown>,
+	destacado?:string,
 	particularidad?:JSON[]
 }

@@ -7,869 +7,17 @@ const el = idagl.elementos;
 
 
 
-const destacadosInfo = [
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"Goku Pasado y Presente",
-		img:{name:"img-geek-kakaroto-goku", format:"webp"},
-		ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-		monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-		imgGalery:[
-			{name:"img-geek-kakaroto-gokuo", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-		descShort:"Vinil adhesivo mate o brillante Dragon Ball - Goku Niño y Adulto",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:15, w:8},
-			{h:30, w:16},
-			{h:60, w:32},
-			{h:100, w:85.3},
-			{h:150, w:79.4}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"Geek",
-		CatSub:[
-			'Anime', 'Dragon Ball', 'Goku'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	},
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"Gym Bed Life go Hard",
-		img:{name:"img-f-gym-bed-life", format:"webp"},
-		ico: {name:"ico-dm-f-gym-bed-life", format:"webp"},
-		monaje:{name:"dm-f-gym-bed-life", format:"webp"},
-		imgGalery:[
-			{name:"img-f-gym-bed-life", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con tematica GYM, para motivarte a realizar esa rutia sin pretextos :)",
-		descShort:"Vinil adhesivo mate o brillante Motivacion GYM.",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:15, w:12.7},
-			{h:30, w:25.4},
-			{h:60, w:50.8},
-			{h:100, w:84.3},
-			{h:150, w:127.2}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"Frases",
-		CatSub:[
-			'Motivacional', 'gym'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	},
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"En los momentos Obscuros 1",
-		img:{name:"img-f-momentos-obscuros", format:"webp"},
-		ico: {name:"ico-dm-f-momentos-obscuros", format:"webp"},
-		monaje:{name:"dm-f-momentos-obscuros", format:"webp"},
-		imgGalery:[
-			{name:"img-f-momentos-obscuros", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con frase 'Es durant nuestros momentos más oscuros cuando tenemos que centrarnos para ver la luz' y la figura de una luna y un lobo sobre un risco",
-		descShort:"Vinil adhesivo mate o brillante frase 'momentos más oscuros'.",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:11.9, w:15},
-			{h:23.8, w:30},
-			{h:47.7, w:60},
-			{h:79.5, w:100},
-			{h:119.2, w:150}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"Frases",
-		CatSub:[
-			'Motivacional', 'momentos', 'obscuros'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	},
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"Majora's Mask - Zelda",
-		img:{name:"img-geek-majora-s-mask", format:"webp"},
-		ico: {name:"ico-dm-geek-majora-s-mask", format:"webp"},
-		monaje:{name:"dm-geek-majora-s-mask", format:"webp"},
-		imgGalery:[
-			{name:"img-geek-majora-s-mask", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con tematica de Zelda, La iconica Majora's Mask del videojuego. ",
-		descShort:"Vinil adhesivo mate o brillante de Zelda Majora's Mask.",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:12.6, w:15},
-			{h:25.2, w:30},
-			{h:50.5, w:60},
-			{h:84.1, w:100},
-			{h:126.2, w:150}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"Geek",
-		CatSub:[
-			'Game', 'Zelda', 'Majora\'s Mask'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	},
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"Pleitesía de la que da alegría",
-		img:{name:"img-d-chica-de-rodillas", format:"webp"},
-		ico: {name:"ico-dm-d-chica-de-rodillas", format:"webp"},
-		monaje:{name:"dm-d-chica-de-rodillas", format:"webp"},
-		imgGalery:[
-			{name:"img-geek-kill-bill-gogo", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con tematica  sensual - erotica de una chica rubia de rodillas desnuda.",
-		descShort:"Vinil adhesivo mate o brillante Plitesia - Sensual - Erotico.",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:15, w:9.4},
-			{h:30, w:18.8},
-			{h:60, w:37.6},
-			{h:100, w:62.7},
-			{h:150, w:94.1}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"sensual",
-		CatSub:[
-			'Sensual', 'Mujeres', 'Pleiteisa 1'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	},
-	{
-		categoria: 'geek',
-		producType:"Vinil Adhesivo",
-		sku:"0101geek010101m01",
-		nombre:"Kill Bill Gogo Yubari",
-		img:{name:"img-geek-kill-bill-gogo", format:"webp"},
-		ico: {name:"ico-dm-geek-kill-bill-gogo", format:"webp"},
-		monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-		imgGalery:[
-			{name:"img-geek-kill-bill-gogo", format:"webp"}
-		],
-		desc:"Vinil adhesivo mate o brillante con tematica de la pelicula Kill Bill, el personaje de Gogo Yubari la chica peleadora con la bola con picos.",
-		descShort:"Vinil adhesivo mate o brillante Kill Bill - Gogo Yubari.",
-		costo:{u:150, c:'00'},
-		descuento:[
-			{tipo:'2x1', costo:'150.00'},
-			{tipo:'rebaja', costo:'140'}
-		],
-		size:[
-			{h:14.2, w:15},
-			{h:28.5, w:30},
-			{h:57.1, w:60},
-			{h:95.2, w:100},
-			{h:142.9, w:150}
-		],
-		producTypeSuB:["Decorativo"],
-		cat:"Geek",
-		CatSub:[
-			'Movie', 'Kill Bill', 'Gogo Yubari'
-		],
-		destacado:[
-			'destacados'
-		],
-		particularidad:[
-			{nombre:'invertido', valor:'true'}
-		]
-	}
-];
 
-
-
-const productos = [
-	{
-		categoria: 'geek',
-		productoTypo: 'recorte',
-		productos: [
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'true', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		}
-		]
-	},
-
-
-	{
-		categoria: 'frases',
-		categoriaID: '02',
-		productos: [
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		}
-		]
-	},
-
-
-	{
-		categoria: 'naturaleza',
-		categoriaID: '03',
-		productos: [
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		},
-		{
-			sku:"0101geek010101m01",
-			nombre:"Goku Pasado y Presente",
-			img:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			ico: {name:"ico-dm-geek-kakaroto-goku", format:"webp"},
-			monaje:{name:"dm-geek-kakaroto-goku", format:"webp"},
-			desc:"Vinil adhesivo mate o brillante con tematica de Dragon Ball donde se representa al Goku en su iconica etapa de niño con su baculo sagrado que aparecio en la primera saga de la serie llamada 'Dragon Ball' y envolviendo todo, esta el mismo personaje pero con el aspecto iconico de Súper Saiyajin ya adulto, que aparecío en las saga llamadas 'Drgon Ball Z'.",
-			costo:{u:150, c:'00'},
-			descuento:[
-				{tipo:'2x1', costo:'150.00'},
-				{tipo:'rebaja', costo:'140'}
-			],
-			size:[
-				{h:15, w:8},
-				{h:30, w:16},
-				{h:60, w:32},
-				{h:100, w:85.3},
-				{h:150, w:79.4}
-			],
-			producType:"Vinil Adhesivo",
-			producTypeSuB:["Decorativo"],
-			cat:"Geek",
-			CatSub:[
-				'Anime', 'Dragon Ball', 'Goku'
-			],
-			propios:[
-				{nombre:'invertido', valor:'true'}
-			],
-			user:{
-				commprado: {status:'false', cantidad:0},
-				carrito: {status:'false', cantidad:0},
-				favoritos: {status:'false', lista:['me-gusta']}
-			}
-		}
-		]
-	}
-];
+//cabeceras y valores generales para los fetch
+const myHeaders = new Headers({
+	"Content-Type": "text/plain"
+});
+const myInit = {
+	method: 'GET',
+	headers: myHeaders,
+	mode: 'cors',
+	cache: 'default'
+}
 
 
 
@@ -914,8 +62,47 @@ function menu(){
 
 function buscar(e){
 	e.preventDefault();
-	console.log('buscando...');
+	const v = el.buscar.value;
+	if(v.length < 4){ return; }
+	if(!el.validB.validar(v, "text")){ return; }
+
+	window.location.href = `/busqueda/?f=${v}`;
 }
+
+function buscarActivo(res){
+	res.splice(0,10).forEach(r => {
+		const boxResult = document.createElement('div');
+		boxResult.classList.add('boxResult');
+		boxResult.innerHTML = `
+			<a href="/producto/?i=${r._id}">${r.nombre}</a>
+		`;
+		el.boxResultGoogle.appendChild(boxResult);
+	});
+	if(res.length >= 10){
+		const boxResult = document.createElement('div');
+		boxResult.innerHTML = `
+			<span>Ver más</span>
+		`;
+		boxResult.classList.add('textCenter');
+		boxResult.addEventListener('click', buscar);
+		el.boxResultGoogle.appendChild(boxResult);
+	}
+	el.formBuscar.appendChild(boxResultGoogle);
+}
+function buscarActivoFiltro(){
+	el.boxResultGoogle.innerHTML = "";
+	if(this.value.length < 4){ return; }
+	if(!el.validB.validar(this.value, "text")){ return; }
+
+	const myRequest = new Request(`http://localhost:1993/find/${this.value}`, myInit);
+	fetch(myRequest)
+	.then(response => response.json())
+	.catch(error => console.error('Error:', error))
+	.then(response => {
+		if(response.success){ buscarActivo(response.data); }
+	});
+}
+
 function colorTheme(){
 	el.destacados.classList.toggle('clearActivo');
 }
@@ -940,7 +127,7 @@ function activarDestacados(){
 	let mover = 'next';
 	switch(this.idaData.objeto){
 		case 'next':
-			if(el.destacadoActivo >= destacadosInfo.length - 1){
+			if(el.destacadoActivo >= el.destacadosInfo.length - 1){
 				el.destacadoActivo = 0;
 			} else{
 				el.destacadoActivo++;
@@ -948,7 +135,7 @@ function activarDestacados(){
 		break;
 		case 'back':
 			if(el.destacadoActivo <= 0){
-				el.destacadoActivo = destacadosInfo.length - 1;
+				el.destacadoActivo = el.destacadosInfo.length - 1;
 			} else{
 				el.destacadoActivo--;
 			}
@@ -967,10 +154,10 @@ function activarDestacados(){
 
 	let salto = false;
 	if( this.idaData.objeto > el.destacadoActivoOld + 1){
-		el.montaje[0].setAttribute('src', el.urlDestacados + destacadosInfo[el.destacadoActivo].img.name + '.' + destacadosInfo[el.destacadoActivo].img.format);
+		el.montaje[0].setAttribute('src', el.urlDestacados + el.destacadosInfo[el.destacadoActivo].montaje.name + '.' + el.destacadosInfo[el.destacadoActivo].montaje.format);
 		salto = true;
 	} else if(this.idaData.objeto < el.destacadoActivoOld - 1){
-		el.montaje[2].setAttribute('src', el.urlDestacados + destacadosInfo[el.destacadoActivo].img.name + '.' + destacadosInfo[el.destacadoActivo].img.format);
+		el.montaje[2].setAttribute('src', el.urlDestacados + el.destacadosInfo[el.destacadoActivo].montaje.name + '.' + el.destacadosInfo[el.destacadoActivo].montaje.format);
 		salto = true;
 	}
 	
@@ -984,14 +171,14 @@ function activarDestacados(){
 				el.montaje.splice(-1);
 				let siguinteValor = el.destacadoActivo + 1;
 
-				if(siguinteValor > destacadosInfo.length - 1){
+				if(siguinteValor > el.destacadosInfo.length - 1){
 					siguinteValor = 0;
 				}
 
 				const montajeNext = document.createElement('img');
 				montajeNext.classList.add('montaje');
 				montajeNext.classList.add('siguiente');
-				montajeNext.setAttribute('src', el.urlDestacados + destacadosInfo[siguinteValor].img.name + '.' + destacadosInfo[siguinteValor].img.format);
+				montajeNext.setAttribute('src', el.urlDestacados + el.destacadosInfo[siguinteValor].montaje.name + '.' + el.destacadosInfo[siguinteValor].montaje.format);
 				montajeNext.setAttribute('alt', 'montaje ' + siguinteValor);
 				montajeNext.setAttribute('width', 60);
 				montajeNext.setAttribute('height', 60);
@@ -1004,7 +191,7 @@ function activarDestacados(){
 					if(el.destacadoActivo < 0){
 						actuaizar = destacadosInfo.length - 1;
 					}
-					el.montaje[2].setAttribute('src', el.urlDestacados + destacadosInfo[actuaizar].img.name + '.' + destacadosInfo[actuaizar].img.format);
+					el.montaje[2].setAttribute('src', el.urlDestacados + el.destacadosInfo[actuaizar].montaje.name + '.' + el.destacadosInfo[actuaizar].montaje.format);
 				}
 				el.destacadoRun = false;
 			}, 1500);
@@ -1020,13 +207,13 @@ function activarDestacados(){
 				let siguinteValor = el.destacadoActivo - 1;
 
 				if(siguinteValor < 0){
-					siguinteValor = destacadosInfo.length - 1;
+					siguinteValor = el.destacadosInfo.length - 1;
 				}
 
 				const montajeBack = document.createElement('img');
 				montajeBack.classList.add('montaje');
 				montajeBack.classList.add('anterior');
-				montajeBack.setAttribute('src', el.urlDestacados + destacadosInfo[siguinteValor].img.name + '.' + destacadosInfo[siguinteValor].img.format);
+				montajeBack.setAttribute('src', el.urlDestacados + el.destacadosInfo[siguinteValor].montaje.name + '.' + el.destacadosInfo[siguinteValor].montaje.format);
 				montajeBack.setAttribute('alt', 'montaje ' + siguinteValor);
 				montajeBack.setAttribute('width', 60);
 				montajeBack.setAttribute('height', 60);
@@ -1036,10 +223,10 @@ function activarDestacados(){
 
 				if(salto){
 					let actuaizar = el.destacadoActivo + 1;
-					if(el.destacadoActivo > destacadosInfo.length - 1){
+					if(el.destacadoActivo > el.destacadosInfo.length - 1){
 						actuaizar = 0;
 					}
-					el.montaje[0].setAttribute('src', el.urlDestacados + destacadosInfo[actuaizar].img.name + '.' + destacadosInfo[actuaizar].img.format);
+					el.montaje[0].setAttribute('src', el.urlDestacados + el.destacadosInfo[actuaizar].montaje.name + '.' + el.destacadosInfo[actuaizar].montaje.format);
 				}
 				el.destacadoRun = false;
 			}, 1500);
@@ -1052,20 +239,21 @@ function activarDestacados(){
 	el.destacadosTituloH3.classList.add('out');
 
 	setTimeout(()=>{
-		let categoria = destacadosInfo[el.destacadoActivo].cat;
-		destacadosInfo[el.destacadoActivo].CatSub.forEach(c => {
+		let categoria = el.destacadosInfo[el.destacadoActivo].cat;
+		el.destacadosInfo[el.destacadoActivo].CatSub.forEach(c => {
 			categoria += " / " + c;
 		});
 		el.destacadosTituloSpan.textContent = categoria;
-		el.destacadosTituloH2.textContent = destacadosInfo[el.destacadoActivo].producType;
-		el.destacadosTituloH3.textContent = destacadosInfo[el.destacadoActivo].nombre;
+		el.destacadosTituloH2.textContent = el.destacadosInfo[el.destacadoActivo].producType;
+		el.destacadosTituloH3.textContent = el.destacadosInfo[el.destacadoActivo].nombre;
 
-		el.destacadosInfoGlobalPrecio.textContent = destacadosInfo[el.destacadoActivo].costo.u;
-		el.destacadosInfoGlobalCentavos.textContent = '.' + destacadosInfo[el.destacadoActivo].costo.c;
-		el.destacadosInfoGlobalDesc.textContent = destacadosInfo[el.destacadoActivo].desc;
+		el.destacadosInfoGlobalPrecio.textContent = el.destacadosInfo[el.destacadoActivo].costo.u;
+		el.destacadosInfoGlobalCentavos.textContent = '.' + el.destacadosInfo[el.destacadoActivo].costo.c;
+		el.destacadosInfoGlobalDesc.textContent = el.destacadosInfo[el.destacadoActivo].desc;
+		el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[el.destacadoActivo]._id}`);
 
 		el.destacadosInfoGlobalMedidas.innerHTML = "";
-		destacadosInfo[el.destacadoActivo].size.forEach(m => {
+		el.destacadosInfo[el.destacadoActivo].size.forEach(m => {
 			const li = document.createElement('li');
 			li.classList.add('medida');
 			li.innerHTML = `h:<span class="resaltar">${m.h}</span> w:<span class="resaltar">${m.w}</span`;
@@ -1081,10 +269,10 @@ function activarDestacados(){
 
 function iniciarDestacados(){
 	// Contruimos los iconos del carrusel para mostrar los productos destacados.
-	destacadosInfo.forEach((d, i) => {
+	el.destacadosInfo.forEach((d, i) => {
 		const div = document.createElement('div');
 		div.classList.add('articulo');
-		div.setAttribute('data-sku', d.sku);
+		div.setAttribute('data-prodID', d.prodID);
 
 		const img = document.createElement('img');
 		img.classList.add('montaje');
@@ -1115,14 +303,14 @@ function iniciarDestacados(){
 	const montajeNext = document.createElement('img');
 	montajeNext.classList.add('montaje');
 	montajeNext.classList.add('siguiente');
-	montajeNext.setAttribute('src', el.urlDestacados + destacadosInfo[1].img.name + '.' + destacadosInfo[1].img.format);
+	montajeNext.setAttribute('src', el.urlDestacados + el.destacadosInfo[1].montaje.name + '.' + el.destacadosInfo[1].montaje.format);
 	montajeNext.setAttribute('alt', 'montaje ' + 1);
 	montajeNext.setAttribute('width', 60);
 	montajeNext.setAttribute('height', 60);
 
 	const montaje = document.createElement('img');
 	montaje.classList.add('montaje');
-	montaje.setAttribute('src', el.urlDestacados + destacadosInfo[0].img.name + '.' + destacadosInfo[0].img.format);
+	montaje.setAttribute('src', el.urlDestacados + el.destacadosInfo[0].montaje.name + '.' + el.destacadosInfo[0].montaje.format);
 	montaje.setAttribute('alt', 'montaje ' + 0);
 	montaje.setAttribute('width', 60);
 	montaje.setAttribute('height', 60);
@@ -1130,8 +318,8 @@ function iniciarDestacados(){
 	const montajeBack = document.createElement('img');
 	montajeBack.classList.add('montaje');
 	montajeBack.classList.add('anterior');
-	montajeBack.setAttribute('src', el.urlDestacados + destacadosInfo[destacadosInfo.length - 1].img.name + '.' + destacadosInfo[destacadosInfo.length - 1].img.format);
-	montajeBack.setAttribute('alt', 'montaje ' + (destacadosInfo.length - 1));
+	montajeBack.setAttribute('src', el.urlDestacados + el.destacadosInfo[el.destacadosInfo.length - 1].montaje.name + '.' + el.destacadosInfo[el.destacadosInfo.length - 1].montaje.format);
+	montajeBack.setAttribute('alt', 'montaje ' + (el.destacadosInfo.length - 1));
 	montajeBack.setAttribute('width', 60);
 	montajeBack.setAttribute('height', 60);
 	
@@ -1142,19 +330,20 @@ function iniciarDestacados(){
 	el.montaje = [montajeNext, montaje, montajeBack];
 
 	//Colocamos la informacion el primer producto visible.
-	let categoria = destacadosInfo[0].cat;
-	destacadosInfo[0].CatSub.forEach(c => {
+	let categoria = el.destacadosInfo[0].cat;
+	el.destacadosInfo[0].CatSub.forEach(c => {
 		categoria += " / " + c;
 	});
 	el.destacadosTituloSpan.textContent = categoria;
-	el.destacadosTituloH2.textContent = destacadosInfo[0].producType;
-	el.destacadosTituloH3.textContent = destacadosInfo[0].nombre;
+	el.destacadosTituloH2.textContent = el.destacadosInfo[0].producType;
+	el.destacadosTituloH3.textContent = el.destacadosInfo[0].nombre;
 
-	el.destacadosInfoGlobalPrecio.textContent = destacadosInfo[0].costo.u;
-	el.destacadosInfoGlobalCentavos.textContent = '.' + destacadosInfo[0].costo.c;
-	el.destacadosInfoGlobalDesc.textContent = destacadosInfo[0].desc;
+	el.destacadosInfoGlobalPrecio.textContent = el.destacadosInfo[0].costo.u;
+	el.destacadosInfoGlobalCentavos.textContent = '.' + el.destacadosInfo[0].costo.c;
+	el.destacadosInfoGlobalDesc.textContent = el.destacadosInfo[0].desc;
+	el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[0]._id}`);
 
-	destacadosInfo[0].size.forEach(m => {
+	el.destacadosInfo[0].size.forEach(m => {
 		const li = document.createElement('li');
 		li.classList.add('medida');
 		li.innerHTML = `h:<span class="resaltar">${m.h}</span> w:<span class="resaltar">${m.w}</span`;
@@ -1164,32 +353,31 @@ function iniciarDestacados(){
 }
 
 
-function loadProductos(){
-	productos.forEach(c => {
+function loadProductos(cat, prods){
+	cat.forEach((c, i) => {
 		const seccion = document.createElement('section');
-		seccion.id = 'key-' + c.categoria.replace(/\s/g, '').trim().toLowerCase();
+		seccion.id = 'key-' + c.replace(/\s/g, '').trim().toLowerCase();
 		const h2 = document.createElement('h2');
-		h2.textContent = c.categoria.replace(/^[a-zA-ZñÑ]/, l => l.toUpperCase());
+		h2.textContent = c.replace(/^[a-zA-ZñÑ]/, l => l.toUpperCase());
 
 		const boxProductos = document.createElement('div');
 		boxProductos.classList.add('boxProductos');
-		c.productos.forEach(p => {
-
+		prods[i].data.forEach(p => {
 			const producto = document.createElement('figure');
 			producto.classList.add('producto');
-			p.propios.forEach(pro => {
+			p.particularidad.forEach(pro => {
 				if(pro.valor == 'true'){
 					producto.classList.add(pro.nombre);
 				}
 			});
 			
-			const like = (p.user.favoritos.status == 'true') ? 'megusta' : '';
+			const like = "";//(p.user.favoritos.status == 'true') ? 'megusta' : '';
 			producto.innerHTML = `
 				<div class="pLike">
 					<div class="corazon ${like}"><i class="fa-solid fa-heart"></i></div>
-					<div class="masCarrito" data-sku="${p.sku}"><i class="fa-solid fa-plus"></i></div>
+					<div class="masCarrito" data-prodID="${p._id}"><i class="fa-solid fa-plus"></i></div>
 				</div>
-				<a href="/producto/${p.sku}" class="pContenedor">
+				<a href="/producto/?i=${p._id}" class="pContenedor">
 					<img src="${el.urlDestacados}${p.ico.name}.${p.ico.format}" width="80" height="80" />
 					<figcaption>
 						${p.nombre}
@@ -1197,14 +385,14 @@ function loadProductos(){
 				</a>
 				<div class="pAccion">
 					<div class="pPrecio">${p.costo.u}.${p.costo.c}</div>
-					<a href="/producto/${p.sku}" class="pBtnVer">Más</a>
+					<a href="/producto/?i=${p._id}" class="pBtnVer">Más</a>
 				</div>
 			`;
 			boxProductos.appendChild(producto)
 		});
 
 		const footer = document.createElement('footer');
-		footer.innerHTML = `<a href="/categoria/${c.categoriaID}">Ver todo</a>`
+		footer.innerHTML = `<a href="/categoria/?v=${c}">Ver todo</a>`
 
 		seccion.appendChild(h2);
 		seccion.appendChild(boxProductos);
@@ -1244,6 +432,11 @@ function formulario(e){
 }
 
 
+function loginUser(){
+
+}
+
+
 function iniciar() {
 	window.bodymovin = arguments[1];
 	window.anime = arguments[2];
@@ -1255,6 +448,7 @@ function iniciar() {
 			console.log('is touche');
 		}
 	}
+	
 
 	
 	//Obtener elementos del html
@@ -1274,10 +468,26 @@ function iniciar() {
 	el.btnMenu = document.getElementById('btnMenu');
 	el.btnMenu.addEventListener('click', menu);
 	el.menu = document.getElementById('menuGlobal');
+	el.categorias = document.getElementById('mCategorias');
+	el.categoria = document.getElementById('mCategoria');
+	el.login = document.getElementById('mLogin');
+	el.carrito = document.getElementById('mCarrito');
+	el.personalizado = document.getElementById('mPersonalizado');
+	el.contacto = document.getElementById('mContacto');
+	el.categoria.addEventListener('click', function(){ this.classList.toggle('activo') } );
+	el.login.addEventListener('click', loginUser);
+	el.carrito.addEventListener('click', () => { window.location.href = "/carrito"; });
+	el.personalizado.addEventListener('click', () => { window.location.href = "/personalizado"; });
+	el.contacto.addEventListener('click', () => { window.location.href = "/contacto"; });
+
 	el.btnBuscar = document.getElementById('btnBuscar');
 	el.formBuscar = document.getElementById('buscarBox');
 	el.btnBuscar.addEventListener('click', buscar);
 	el.formBuscar.addEventListener('submite', buscar);
+	el.boxResultGoogle = document.getElementById('boxResultGoogle');
+	el.buscar = document.getElementById('buscar');
+	el.buscar.addEventListener('keyup', buscarActivoFiltro);
+	el.validB = new ValidarForm();
 
 	el.btnDark = document.getElementById('dark');
 	el.btnDark.addEventListener('click', colorTheme);
@@ -1297,6 +507,7 @@ function iniciar() {
 	el.destacadosInfoGlobalCentavos = document.querySelector('.centavos');
 	el.destacadosInfoGlobalDesc = document.querySelector('.descripcion');
 	el.destacadosInfoGlobalMedidas = document.getElementById('medidas');
+	el.destacadosInfoGlobalBtnVer = document.getElementById('btnVerMas');
 
 	el.destacadoMontajeBox = document.getElementById('destacadoMontajeBox');
 	el.montaje = [];
@@ -1313,23 +524,64 @@ function iniciar() {
 	el.btnMontajeBack.addEventListener('click', activarDestacados);
 
 	el.destacadosTitulo = document.getElementById('destacadosTitulo');
-	const extraIMG = [];
-	el.urlDestacados = 'assets/img/home_inicio/';
-	destacadosInfo.forEach(d => {
-		extraIMG.push({
-			img: el.urlDestacados + d.img.name + '.' + d.img.format,
+	
+	const myRequest = new Request('http://localhost:1993/destacados/', myInit);
+	fetch(myRequest)
+	.then(response => response.json())
+	.catch(error => console.error('Error:', error))
+	.then(response => {
+		el.destacadosInfo = response.data;
+		const extraIMG = [];
+		el.urlDestacados = 'assets/img/home_inicio/';
+		el.destacadosInfo.forEach(d => {
+			extraIMG.push({
+				img: el.urlDestacados + d.montaje.name + '.' + d.montaje.format,
+			});
+			extraIMG.push({
+				img: el.urlDestacados + d.ico.name + '.' + d.ico.format,
+			});
 		});
-		extraIMG.push({
-			img: el.urlDestacados + d.ico.name + '.' + d.ico.format,
-		});
+		el.precarga.useStanByFunc = iniciarDestacados;
+		el.precarga.stanby(extraIMG);
 	});
-	el.precarga.useStanByFunc = iniciarDestacados;
-	el.precarga.stanby(extraIMG);
+	
 
+	
+	
 	el.boxCatgoriasProductos = document.getElementById('boxCatgoriasProductos');
-	setTimeout(loadProductos, 100);
+	const myRequestProd = new Request('http://localhost:1993/categorias/', myInit);
+	fetch(myRequestProd)
+	.then(response => response.json())
+	.catch(error => console.error('Error:', error))
+	.then(response => {
+		const productoByCat = [];
+		const categorias = response.data;
+		categorias.forEach(c => {
+			//Preparar la ruta y generar los fetch para las promesas.
+			const myRequestBy = new Request(`http://localhost:1993/categorias/${c}`, myInit);
+			productoByCat.push(fetch(myRequestBy));
 
-
+			//Creando los elementos e categoria del menu.
+			const li = document.createElement('li');
+			li.classList.add('menuItem');
+			li.textContent = c.replace(/\s/g, '').toLowerCase();
+			li.addEventListener('click', () => { window.location.href = `/categoria/?v=${c}`; });
+			el.categorias.appendChild(li);
+		});
+		Promise.all(productoByCat)
+			.then(responses => {
+				const datas = [];
+				responses.forEach( r => {datas.push( r.json() )} );
+				Promise.all(datas)
+					.then(data => {
+						loadProductos(categorias, data);
+					}).catch(reason => {
+						console.log(reason)
+					});
+			}).catch(reason => {
+				console.log(reason)
+			});
+	});
 
 	// el.boxTimeline1.idaAniTimeline = FUNCION-A-CORRER;
 	// el.boxTimeline1.idaObserverAccion = 'TIPO-ACCEION';//EJEMPLO: animationFrame o pasos
@@ -1349,21 +601,7 @@ function iniciar() {
 	el.fPv.run();
 
 
-	const myHeaders = new Headers({
-		"Content-Type": "text/plain"
-	});
-	const myInit = {
-		method: 'GET',
-		headers: myHeaders,
-		mode: 'cors',
-		cache: 'default'
-	}
-	const myRequest = new Request('http://localhost:1993/producto/', myInit);
-
-	fetch(myRequest)
-	.then(response => {
-		console.log(response);
-	})
+	
 	
 }
 
@@ -1376,5 +614,5 @@ requirejs.config({
 	baseUrl: "assets/js/owner",
 	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"},
 });
-requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-
+//requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
+requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);

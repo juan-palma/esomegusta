@@ -51,7 +51,7 @@ class ValidarForm{
 	}
 	
 
-	validar(){
+	comprobarForm(){
 		const camposIter = [...this.campos];
 		return camposIter.every((i)=>{ return i.idaData.status == 'valido'; });
 	}
@@ -120,6 +120,28 @@ class ValidarForm{
 			i.idaData.input.addEventListener('blur', this.ejecutar.bind(this));
 		});
 	}
+
+
+
+	validar(valor, regEx){
+		const r = this.exp_reg[regEx];
+		const v = valor.trim();
+		let status = true;
+
+		if(v == ""){
+			status = false;
+		} else{
+			if(this.exp_reg.espacios.exp.test(v) === this.exp_reg.espacios.condicion){
+				status = 'error';
+			} else{
+				if(r.exp.test(v) === r.condicion){ status = 'error'; }
+			}
+		}
+
+		return status;
+	}
+	
+
 	
 
 	constructor(form){

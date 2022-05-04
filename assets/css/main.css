@@ -569,6 +569,8 @@ div#ventanaPOP {
 			}
 				#buscarBox{
 					margin-right: 24px;
+					position: relative;
+					pointer-events: all;
 				}
 					#buscarBox input{
 						width: 140px;
@@ -656,7 +658,45 @@ div#ventanaPOP {
 						#btnMenu.activo:hover i::before{
 							color: #b42b08;
 						}
+			
+				div#boxResultGoogle {
+					width: calc(100% - (0px));
+					height: max-content;
+					position: absolute;
+					left: 0;
+					background-color: #fff;
+					border-radius: 12px;
+					grid-gap: 5px;
+					display: none;
+				}
+					div#boxResultGoogle > div{
+						padding: 0px 19px;
+					}
+					div#boxResultGoogle > div:first-child{
+						padding-top: 19px;
+					}
+					div#boxResultGoogle > div:last-child{
+						padding-bottom: 19px;
+					}
+						div#boxResultGoogle > div a{
+							width: 100%;
+							display: block;
+							position: relative;
+							text-decoration: none;
+							white-space: nowrap;
+							color: var(--colorTexto);
+							transition: all 100ms ease-in-out;
+						}
+						div#boxResultGoogle > div a:hover{
+							color: #0383db;
+						}
+				form#buscarBox:focus-within div#boxResultGoogle{
+					display:grid
+				}
 			nav#menuGlobal {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
 				position: fixed;
 				width: 68vw;
 				height: 100vh;
@@ -670,7 +710,49 @@ div#ventanaPOP {
 			}
 			nav#menuGlobal.activo{
 				right: -0.01vw;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
 			}
+				ul#menuBox {
+					width: calc(100% - (var(--margenGlobal) * 2));
+					max-height: calc(100% - (var(--margenGlobal) * 2));
+					margin-top: 88px;
+					position: relative;
+					right: var(--margenGlobal);
+					text-align: right;
+					font-size: clamp(20px, 3vw, 38px);
+					color: #fff;
+					overflow-y: auto;
+				}
+					ul#menuBox .menuItem{
+						cursor: pointer;
+						transition: all 200ms ease-in-out;
+						padding: 4px 0px;
+						width: max-content;
+						margin: 0 0 0 auto;
+					}
+					ul#menuBox .menuItem:hover,
+					ul#menuBox .menuItem.activo{
+						padding-right: 12px;
+						color: var(--colorPrincipal);
+					}
+					ul#mCategorias {
+						height: max-content;
+						overflow-y: hidden;
+						overflow-x: visible;
+						transition: all 600ms ease-in-out;
+						max-height: 0px;
+					}
+					li#mCategoria.activo ~ #mCategorias {
+						max-height: 100vh;
+						overflow-y: initial;
+					}
+						ul#mCategorias .menuItem{
+							font-family: 'Grape Nuts';
+							font-size: 86%;
+						}
+				
 		section#destacados {
 			height: calc(100vw * 0.625);
 			max-height: 100vh;
@@ -905,7 +987,6 @@ div#ventanaPOP {
 				display: flex;
 				justify-content: flex-end;
 				border-radius: 14px;
-				overflow: hidden;
 				margin-bottom: 48px;
 				transition: all 700ms ease-in-out;
 				opacity: 1;
@@ -925,6 +1006,7 @@ div#ventanaPOP {
 					opacity: .8;
 					left: 0px;
 					top: 0px;
+					border-radius: 14px;
 				}
 				section#destacados.clearActivo div#destacadosInfoGlobal::before{
 					background-color: var(--colorTexto);
@@ -976,6 +1058,23 @@ div#ventanaPOP {
 							margin-bottom: 8px;
 							color: var(--colorPrincipalDark);
 						}
+					a#btnVerMas {
+						position: absolute;
+						padding: 10px 16px;
+						top: 0px;
+						left: 0px;
+						transform: translateY(14px) translateX(-98%);
+						background-color: var(--colorTercero);
+						text-decoration: none;
+						color: black;
+						border-bottom-left-radius: 10px;
+						border-top-left-radius: 10px;
+						transition: all 250ms ease-in-out;
+					}
+					a#btnVerMas:hover{
+						padding: 10px 24px;
+						transform: translateY(14px) translateX( calc((98% + 0px) * -1) );
+					}
 
 			#destacadosArticulosGeneral{
 				width: calc(24% - var(--margenGlobal));
@@ -1143,6 +1242,7 @@ section#presentacion {
 			}
 				#boxCatgoriasProductos .boxProductos .producto {
 					flex: 1 1 0;
+					max-width: calc(100% / 6 - (24px / 6));
 					padding: 14px;
 					background-color: #fff1;
 					border-radius: 12px;
@@ -1492,6 +1592,15 @@ div#footerGeneral {
 					gap: 16px;
 					row-gap: 1px;
 				}
+			a#btnVerMas {
+				transform: translateY(calc(96% * -1)) translateX(24px);
+				border-bottom-left-radius: 0px;
+				border-top-right-radius: 10px;
+			}
+			a#btnVerMas:hover {
+				padding: 14px 16px;
+				transform: translateY(calc(96% * -1)) translateX(24px);
+			}
 
 
 			div#destacadosArticulosGeneral {
@@ -1692,6 +1801,16 @@ div#footerGeneral {
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
 			}
+
+	a#btnVerMas {
+		transform: translateY(calc(96% * -1)) translateX(24px);
+		border-bottom-left-radius: 0px;
+		border-top-right-radius: 10px;
+	}
+	a#btnVerMas:hover {
+		padding: 14px 16px;
+		transform: translateY(calc(96% * -1)) translateX(24px);
+	}
 }
 
 
@@ -1808,6 +1927,15 @@ div#footerGeneral {
 				position: absolute;
 				padding: 0;
 			}
+	a#btnVerMas {
+		transform: translateY(14px) translateX(-98%);
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 0px;
+	}
+	a#btnVerMas:hover {
+		padding: 10px 24px;
+		transform: translateY(14px) translateX( calc((98% + 0px) * -1) );
+	}
 }
 /* ==========================================================================
 	Estilos para un especto acostado pero en dispositivos medianos
@@ -1902,6 +2030,18 @@ div#footerGeneral {
 			div#destacadosInfoBox .descripcion{
 				display: none;
 			}
+	div#destacadosInfoGlobal {
+		width: min-content;
+	}
+	a#btnVerMas {
+		transform: translateY(14px) translateX(-98%);
+		border-bottom-left-radius: 10px;
+		border-top-right-radius: 0px;
+	}
+	a#btnVerMas:hover {
+		padding: 10px 24px;
+		transform: translateY(14px) translateX( calc((98% + 0px) * -1) );
+	}
 }
 /* ==========================================================================
 	Estilos para un espect acostado pero en dispositivos muy chicos
@@ -1983,6 +2123,9 @@ div#footerGeneral {
 	#boxCatgoriasProductos .boxProductos {
 		flex-wrap: wrap;
 	}
+		#boxCatgoriasProductos .boxProductos .producto{
+			max-width: inherit;
+		}
 		#boxCatgoriasProductos .boxProductos .producto:nth-last-child(-n+2) {
 			flex: 1 1 50%;
 			max-width: calc(50% - (24px / 2));

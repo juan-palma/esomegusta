@@ -1,5 +1,5 @@
 import cliente from "../../dbConnetc.ts";
-import PlantillaProducto from "../../interfaces/productos.ts";
+import PlantillaProducto from "../../interfaces/Productos.ts";
 import { Bson } from "../../deps.ts";
 const { ObjectId } = Bson;
 

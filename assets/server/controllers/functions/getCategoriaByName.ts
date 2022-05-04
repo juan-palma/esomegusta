@@ -1,5 +1,5 @@
 import cliente from "../../dbConnetc.ts";
-import PlantillaProducto from "../../interfaces/productos.ts";
+import PlantillaProducto from "../../interfaces/Productos.ts";
 
 export default async function getCategoriaByName({params, response}:{params:{name:string, limite?:string}, response:any}){
 	const db =  cliente.database("esomegusta");

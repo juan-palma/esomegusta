@@ -1,5 +1,5 @@
 import cliente from "../../dbConnetc.ts";
-import PlantillaProducto from "../../interfaces/productos.ts";
+import PlantillaProducto from "../../interfaces/Productos.ts";
 
 export default async function getAllDestacados({ response }: { response:any  }){
 	const db =  cliente.database("esomegusta");

@@ -1,8 +1,9 @@
 // deno-lint-ignore-file no-inferrable-types
-import { Application, oakCors, green, yellow } from "./deps.ts";
+import { Application, oakCors, ListenOptionsBase, green, yellow } from "./deps.ts";
 import rutas from "./routes/rutas.ts";
 
 const app = new Application();
+const host:string = "esomegusta.idalibre.com";
 const port:number = 1993;
 
 app.use(
@@ -19,4 +20,8 @@ app.addEventListener("listen", ({ secure, hostname, port }) => {
 	const url = `${protocol}${hostname ?? "localhost"}:${port}`;
 	console.log(`${yellow("Listening on:")} ${green(url)}`);
 });
-await app.listen({ port });
+
+const opcionesServer: ListenOptionsBase = {
+	hostname: host, port:port
+}
+await app.listen(opcionesServer);

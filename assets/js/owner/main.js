@@ -15,8 +15,8 @@ const myHeaders = new Headers({
 const myInit = {
 	method: 'GET',
 	headers: myHeaders,
-	mode: 'no-cors',
-	cache: 'default'
+	mode: 'cors',
+	cache: 'no-cache'
 }
 const urlBase = "https://esomegusta.idalibre.com:444";
 

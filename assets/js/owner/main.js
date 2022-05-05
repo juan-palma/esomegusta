@@ -15,8 +15,8 @@ const myHeaders = new Headers({
 const myInit = {
 	method: 'GET',
 	headers: myHeaders,
-	mode: 'same-origin',
-	referrerPolicy:'same-origin',
+	mode: 'no-cors',
+	referrerPolicy:'no-referrer',
 	cache: 'no-cache'
 }
 

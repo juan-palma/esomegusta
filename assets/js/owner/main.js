@@ -15,9 +15,8 @@ const myHeaders = new Headers({
 const myInit = {
 	method: 'GET',
 	headers: myHeaders,
-	mode: 'no-cors',
-	referrerPolicy:'no-referrer',
-	cache: 'no-cache'
+	mode: 'cors',
+	cache: 'default'
 }
 
 
@@ -624,3 +623,14 @@ requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "pe
 
 
 
+
+
+const requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://esomegusta.idalibre.com:444", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

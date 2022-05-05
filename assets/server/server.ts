@@ -6,12 +6,13 @@ const app = new Application();
 const host:string = "esomegusta.idalibre.com";
 const port:number = 1993;
 
-app.use(
-	oakCors({
-		origin: /^.+0.0.0.0:1993|localhost:1993|esomegusta:7890|esomegusta.idalibre.com$/,
-		optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-	})
-);
+// app.use(
+// 	oakCors({
+// 		origin: /^.+0.0.0.0:1993|localhost:1993|esomegusta:7890|esomegusta.idalibre.com$/,
+// 		optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// 	})
+// );
+app.use(oakCors());
 app.use(rutas.routes());
 app.use(rutas.allowedMethods());
 

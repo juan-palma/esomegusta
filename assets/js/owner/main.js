@@ -95,7 +95,7 @@ function buscarActivoFiltro(){
 	if(this.value.length < 4){ return; }
 	if(!el.validB.validar(this.value, "text")){ return; }
 
-	const myRequest = new Request(`http://esomegusta.idalibre.com:1993/find/${this.value}`, myInit);
+	const myRequest = new Request(`${urlBase}/find/${this.value}`, myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))

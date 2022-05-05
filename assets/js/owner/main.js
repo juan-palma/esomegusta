@@ -15,7 +15,7 @@ const myHeaders = new Headers({
 const myInit = {
 	method: 'GET',
 	headers: myHeaders,
-	mode: 'no-cors',
+	mode: 'cors',
 	cache: 'default'
 }
 
@@ -616,3 +616,10 @@ requirejs.config({
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
 requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
+
+
+
+
+
+
+

@@ -531,7 +531,6 @@ function iniciar() {
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
 	.then(response => {
-		console.log(response);
 		el.destacadosInfo = response.data;
 		const extraIMG = [];
 		el.urlDestacados = 'assets/img/home_inicio/';

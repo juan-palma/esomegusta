@@ -15,7 +15,7 @@ const myHeaders = new Headers({
 const myInit = {
 	method: 'GET',
 	headers: myHeaders,
-	mode: 'cors',
+	mode: 'no-cors',
 	cache: 'default'
 }
 
@@ -525,7 +525,8 @@ function iniciar() {
 
 	el.destacadosTitulo = document.getElementById('destacadosTitulo');
 	
-	const myRequest = new Request('http://esomegusta.idalibre.com:1993/destacados/', myInit);
+	//const myRequest = new Request('http://esomegusta.idalibre.com:1993/destacados/', myInit);
+	const myRequest = new Request('https://esomegusta.idalibre.com:444', myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))

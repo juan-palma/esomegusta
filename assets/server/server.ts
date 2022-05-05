@@ -31,16 +31,3 @@ const opcionesServer: ListenOptionsTls = {
 	alpnProtocols:["h2", "http/1.1"]
 }
 await app.listen(opcionesServer);
-
-
-// import { serveTls } from "https://deno.land/std@0.137.0/http/server.ts";
-
-// function handler(req: Request): Response {
-// 	return new Response("Hello, World!");
-// }
-
-// serveTls(handler, {
-// 	port: 443,
-// 	certFile: "./idalibre.crt",
-// 	keyFile: "./idalibre.key",
-// });

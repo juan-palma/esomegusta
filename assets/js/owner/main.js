@@ -18,6 +18,7 @@ const myInit = {
 	mode: 'no-cors',
 	cache: 'default'
 }
+const urlBase = "https://esomegusta.idalibre.com:444";
 
 
 
@@ -526,7 +527,7 @@ function iniciar() {
 	el.destacadosTitulo = document.getElementById('destacadosTitulo');
 	
 	//const myRequest = new Request('http://esomegusta.idalibre.com:1993/destacados/', myInit);
-	const myRequest = new Request('https://esomegusta.idalibre.com:444', myInit);
+	const myRequest = new Request(urlBase, myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -550,7 +551,7 @@ function iniciar() {
 	
 	
 	el.boxCatgoriasProductos = document.getElementById('boxCatgoriasProductos');
-	const myRequestProd = new Request('http://esomegusta.idalibre.com:1993/categorias/', myInit);
+	const myRequestProd = new Request('${urlBase}/categorias/', myInit);
 	fetch(myRequestProd)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -559,7 +560,7 @@ function iniciar() {
 		const categorias = response.data;
 		categorias.forEach(c => {
 			//Preparar la ruta y generar los fetch para las promesas.
-			const myRequestBy = new Request(`http://esomegusta.idalibre.com:1993/categorias/${c}/6`, myInit);
+			const myRequestBy = new Request(`${urlBase}/categorias/${c}/6`, myInit);
 			productoByCat.push(fetch(myRequestBy));
 
 			//Creando los elementos e categoria del menu.
@@ -617,21 +618,3 @@ requirejs.config({
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
 requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-
-
-
-
-
-
-
-
-
-const requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};
-
-fetch("https://esomegusta.idalibre.com:444", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));

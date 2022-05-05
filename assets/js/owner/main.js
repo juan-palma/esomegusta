@@ -94,7 +94,7 @@ function buscarActivoFiltro(){
 	if(this.value.length < 4){ return; }
 	if(!el.validB.validar(this.value, "text")){ return; }
 
-	const myRequest = new Request(`http://localhost:1993/find/${this.value}`, myInit);
+	const myRequest = new Request(`http://esomegusta.idalibre.com:1993/find/${this.value}`, myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -525,7 +525,7 @@ function iniciar() {
 
 	el.destacadosTitulo = document.getElementById('destacadosTitulo');
 	
-	const myRequest = new Request('http://localhost:1993/destacados/', myInit);
+	const myRequest = new Request('http://esomegusta.idalibre.com:1993/destacados/', myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -549,7 +549,7 @@ function iniciar() {
 	
 	
 	el.boxCatgoriasProductos = document.getElementById('boxCatgoriasProductos');
-	const myRequestProd = new Request('http://localhost:1993/categorias/', myInit);
+	const myRequestProd = new Request('http://esomegusta.idalibre.com:1993/categorias/', myInit);
 	fetch(myRequestProd)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -558,7 +558,7 @@ function iniciar() {
 		const categorias = response.data;
 		categorias.forEach(c => {
 			//Preparar la ruta y generar los fetch para las promesas.
-			const myRequestBy = new Request(`http://localhost:1993/categorias/${c}/6`, myInit);
+			const myRequestBy = new Request(`http://esomegusta.idalibre.com:1993/categorias/${c}/6`, myInit);
 			productoByCat.push(fetch(myRequestBy));
 
 			//Creando los elementos e categoria del menu.

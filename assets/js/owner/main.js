@@ -526,8 +526,7 @@ function iniciar() {
 
 	el.destacadosTitulo = document.getElementById('destacadosTitulo');
 	
-	//const myRequest = new Request('http://esomegusta.idalibre.com:1993/destacados/', myInit);
-	const myRequest = new Request(urlBase, myInit);
+	const myRequest = new Request(`${urlBase}/destacados/`, myInit);
 	fetch(myRequest)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))
@@ -551,7 +550,7 @@ function iniciar() {
 	
 	
 	el.boxCatgoriasProductos = document.getElementById('boxCatgoriasProductos');
-	const myRequestProd = new Request('${urlBase}/categorias/', myInit);
+	const myRequestProd = new Request(`${urlBase}/categorias/`, myInit);
 	fetch(myRequestProd)
 	.then(response => response.json())
 	.catch(error => console.error('Error:', error))

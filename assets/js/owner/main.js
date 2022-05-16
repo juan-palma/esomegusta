@@ -18,8 +18,13 @@ const myInit = {
 	mode: 'cors',
 	cache: 'no-cache'
 }
-const urlBase = "https://esomegusta.idalibre.com:444";
-
+const urlBase = "https://api-esomegusta.idalibre.com:444";
+let entorno;
+if(window.location.hostname = "esomegusta"){
+	entorno = "local";
+} else if(window.location.hostname = "api-esomegusta.idalibre.com"){
+	entorno = "remoto";
+}
 
 
 

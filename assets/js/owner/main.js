@@ -613,7 +613,6 @@ function iniciar() {
 }
 
 
-console.log('hola');
 
 // iniciar la solicitud de los modulos y la ejecucion inicial del sistema.
 //importamos los archivos y librerias necesarios

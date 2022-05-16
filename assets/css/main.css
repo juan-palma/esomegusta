@@ -1236,6 +1236,7 @@ section#presentacion {
 			}
 			#boxCatgoriasProductos .boxProductos {
 				flex: 1 1 100%;
+				width: 100%;
 				display: flex;
 				gap: 24px;
 				order: 3;
@@ -1244,6 +1245,9 @@ section#presentacion {
 					flex: 1 1 0;
 					max-width: calc(100% / 6 - (24px / 6));
 					padding: 14px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
 					background-color: #fff1;
 					border-radius: 12px;
 					color: #fff;

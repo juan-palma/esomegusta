@@ -9,7 +9,7 @@ const el = idagl.elementos;
 let entorno;
 if(window.location.hostname === "esomegusta"){
 	entorno = "local";
-} else if(window.location.hostname === "api-esomegusta.idalibre.com"){
+} else if(window.location.hostname === "esomegusta.idalibre.com"){
 	entorno = "remoto";
 }
 
@@ -254,7 +254,7 @@ function activarDestacados(){
 		el.destacadosTituloH2.textContent = el.destacadosInfo[el.destacadoActivo].producType;
 		el.destacadosTituloH3.textContent = el.destacadosInfo[el.destacadoActivo].nombre;
 
-		el.destacadosInfoGlobalPrecio.textContent = el.destacadosInfo[el.destacadoActivo].costo.u;
+		el.destacadosInfoGlobalPrecio.textContent = '$' + el.destacadosInfo[el.destacadoActivo].costo.u;
 		el.destacadosInfoGlobalCentavos.textContent = '.' + el.destacadosInfo[el.destacadoActivo].costo.c;
 		el.destacadosInfoGlobalDesc.textContent = el.destacadosInfo[el.destacadoActivo].desc;
 		el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[el.destacadoActivo]._id}`);
@@ -345,7 +345,7 @@ function iniciarDestacados(){
 	el.destacadosTituloH2.textContent = el.destacadosInfo[0].producType;
 	el.destacadosTituloH3.textContent = el.destacadosInfo[0].nombre;
 
-	el.destacadosInfoGlobalPrecio.textContent = el.destacadosInfo[0].costo.u;
+	el.destacadosInfoGlobalPrecio.textContent = '$' + el.destacadosInfo[0].costo.u;
 	el.destacadosInfoGlobalCentavos.textContent = '.' + el.destacadosInfo[0].costo.c;
 	el.destacadosInfoGlobalDesc.textContent = el.destacadosInfo[0].desc;
 	el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[0]._id}`);
@@ -391,7 +391,7 @@ function loadProductos(cat, prods){
 					</figcaption>
 				</a>
 				<div class="pAccion">
-					<div class="pPrecio">${p.costo.u}.${p.costo.c}</div>
+					<div class="pPrecio">$${p.costo.u}.${p.costo.c}</div>
 					<a href="/producto/?i=${p._id}" class="pBtnVer">Más</a>
 				</div>
 			`;

@@ -6,6 +6,12 @@ idagl.elementos = {};
 const el = idagl.elementos;
 
 
+let entorno;
+if(window.location.hostname === "esomegusta"){
+	entorno = "local";
+} else if(window.location.hostname === "api-esomegusta.idalibre.com"){
+	entorno = "remoto";
+}
 
 
 //cabeceras y valores generales para los fetch
@@ -18,13 +24,8 @@ const myInit = {
 	mode: 'cors',
 	cache: 'no-cache'
 }
-const urlBase = "https://api-esomegusta.idalibre.com:444";
-let entorno;
-if(window.location.hostname = "esomegusta"){
-	entorno = "local";
-} else if(window.location.hostname = "api-esomegusta.idalibre.com"){
-	entorno = "remoto";
-}
+const urlBase = (entorno === "local") ? "https://0.0.0.0:444" : "https://api-esomegusta.idalibre.com:444" ;
+
 
 
 

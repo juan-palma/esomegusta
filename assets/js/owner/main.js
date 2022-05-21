@@ -260,7 +260,7 @@ function activarDestacados(){
 		el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[el.destacadoActivo]._id}`);
 
 		el.destacadosInfoGlobalMedidas.innerHTML = "";
-		el.destacadosInfo[el.destacadoActivo].size.forEach(m => {
+		el.destacadosInfo[el.destacadoActivo].variantes.size.forEach(m => {
 			const li = document.createElement('li');
 			li.classList.add('medida');
 			li.innerHTML = `h:<span class="resaltar">${m.h}</span> w:<span class="resaltar">${m.w}</span`;
@@ -350,7 +350,7 @@ function iniciarDestacados(){
 	el.destacadosInfoGlobalDesc.textContent = el.destacadosInfo[0].desc;
 	el.destacadosInfoGlobalBtnVer.setAttribute('href', `/producto/?i=${el.destacadosInfo[0]._id}`);
 
-	el.destacadosInfo[0].size.forEach(m => {
+	el.destacadosInfo[0].variantes.size.forEach(m => {
 		const li = document.createElement('li');
 		li.classList.add('medida');
 		li.innerHTML = `h:<span class="resaltar">${m.h}</span> w:<span class="resaltar">${m.w}</span`;
@@ -429,7 +429,7 @@ function formulario(e){
 		enviandoForm = false;
 	}
 
-	if(el.fPv.validar()){
+	if(el.fPv.comprobarForm()){
 		const formData = new FormData(el.form);
 		enviandoForm = true;
 		request('assets/server/form.php', formData, enviado, error);
@@ -440,7 +440,82 @@ function formulario(e){
 
 
 function loginUser(){
+	el.loginBox.classList.add('activo');
+}
+function loginUserCancel(){
+	el.login.clear();
+	el.loginBox.classList.remove('activo');
+}
+let logeando = false;
+const sendLoginForm = async function(e){
+	e.preventDefault();
+	if(logeando){ return; }
 
+	function logueado(j){
+		console.log(j);
+		el.profile = j;
+
+		if (window.PasswordCredential) {
+			const c = Promise.resolve(new PasswordCredential(e.target));
+			c.then(v => {
+				return navigator.credentials.store(v);
+			})
+			.then(r => console.log(r))
+			.catch(error => console.error('Error:', error));
+		}
+
+		el.fLoginv.clear();
+		logeando = false;
+	}
+
+	function error(j){
+		console.log(j);
+		logeando = false;
+		pop(j.message, 'alert');
+	}
+
+	if(el.fLoginv.comprobarForm()){
+		const formData = new FormData(el.loginForm);
+		logeando = true;
+		try {
+			//const boundary = "---------EsoMeGustaBoundary" + new Date().getTime();
+			const myHeaders = new Headers({
+				"Accept": 'application/json'
+				// "Content-Type": "multipart/form-data; boundary=multipart-form-boundary"
+			});
+			const myInit = {
+				method: 'POST',
+				headers: myHeaders,
+				mode: 'cors',
+				cache: 'no-cache',
+				credentials: 'include',
+				body: formData,
+				redirect: 'follow'
+			}
+			const myRequest = new Request(`${urlBase}/login`, myInit);
+			// fetch(myRequest)
+			// .then(response => response.json())
+			// .then(response => {
+			// 	console.log(response);
+			// })
+			// .catch(error => console.error('Error:', error));
+			const response = await fetch(myRequest);
+			const data = await response.json();
+			
+			if(data.success){
+				logueado(data.data);
+			} else{
+				error(data);
+			}
+			
+		} catch (error) {
+			logeando = false;
+			console.log(error);
+		}
+		
+	} else{
+		pop('El formulario tiene errores que se deben corregir.', 'alert');
+	}
 }
 
 
@@ -477,7 +552,15 @@ function iniciar() {
 	el.menu = document.getElementById('menuGlobal');
 	el.categorias = document.getElementById('mCategorias');
 	el.categoria = document.getElementById('mCategoria');
+
 	el.login = document.getElementById('mLogin');
+	el.loginBox = document.getElementById('loginBox');
+	el.loginForm = document.getElementById('loginForm');
+	el.loginForm.addEventListener('submit', sendLoginForm);
+	el.fLoginv = new ValidarForm();
+	el.fLoginv.form = el.loginForm;
+	el.fLoginv.run();
+
 	el.carrito = document.getElementById('mCarrito');
 	el.personalizado = document.getElementById('mPersonalizado');
 	el.contacto = document.getElementById('mContacto');

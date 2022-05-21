@@ -35,6 +35,11 @@ class ValidarForm{
 			exp: /^[\s]+$/,
 			condicion: true,
 			textError: "No debe dejar solo espacios en el campo"
+		},
+		pass:{
+			exp: /^(?=.*[a-zñ])(?=.*[A-ZÑ])(?=.*\d)(?=.*[\s$@$%*&¿?¡!#.-_+])[A-ZÑa-zñ\d\s$@$%*&¿?¡!#.-_+]{8,}/,
+			condicion: false,
+			textError: "La clave debe tener 8 o más caracteres, 1 mayuscula 1 minuscula 1 numero 1 espacio o symbolo ej: @$%*&¿?¡!#.-_+ "
 		}
 	}
 	form = "";

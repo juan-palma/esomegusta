@@ -115,6 +115,37 @@
 					<div id="btnMenu"><i class="fa-solid fa-bars"></i></div>
 				</div>
 				<nav id="menuGlobal">
+					<div id="loginBox">
+						<div id="tituloFormLogin">Inciar sesion:</div>
+						<form id="loginForm">
+
+							<div class="boxInput" data-validar="mail">
+								<div class="inputEfect">
+									<input type="email" id="username" name="username" class="input" autocomplete="username" value="" placeholder="Correo" required="" />
+									<div class="efectoLinea"></div>
+									<div class="iconoStatus">
+										<img class="cuadroGuiaH" src="assets/img/cuadro.webp" alt="cuadro guia" width="10" height="10">
+										<i class="fa-solid fa-circle-check"></i>
+									</div>
+								</div>
+								<div class="inputError"></div>
+							</div>
+
+							<div class="boxInput" data-validar="pass">
+								<div class="inputEfect">
+									<input type="password" id="password" name="password" class="input" autocomplete="current-password" value="" placeholder="Contraseña" required="" />
+									<div class="efectoLinea"></div>
+									<div class="iconoStatus">
+										<img class="cuadroGuiaH" src="assets/img/cuadro.webp" alt="cuadro guia" width="10" height="10">
+										<i class="fa-solid fa-circle-check"></i>
+									</div>
+								</div>
+								<div class="inputError"></div>
+							</div>
+
+							<input type="submit" id="btnLogin" value="Iniciar">
+						</form>
+					</div>
 					<ul id="menuBox">
 						<li id="mLogin" class="menuItem">Login</li>
 						<li id="mCarrito" class="menuItem">Carrito</li>

@@ -443,7 +443,7 @@ function formulario(e){
 function activeLoginRedes(){
 	//Funciones para el login con google
 	function handleCredentialResponseGoogle(response){
-		console.log("Encoded JWT ID token: " + response.credential);
+		console.log(response);
 	}
 	google.accounts.id.initialize({
 		client_id: "974553466428-7rn34it6f65dk52ajdm32v8lp1he29is.apps.googleusercontent.com",

@@ -450,7 +450,7 @@ function activeLoginRedes(){
 		callback: handleCredentialResponseGoogle
 	});
 	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
-	google.accounts.id.prompt(); // also display the One Tap dialog
+	//google.accounts.id.prompt(); // also display the One Tap dialog
 }
 function loginUser(){
 	el.loginBox.classList.add('activo');

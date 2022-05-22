@@ -116,7 +116,7 @@
 				</div>
 				<nav id="menuGlobal">
 					<div id="loginBox">
-						<div id="tituloFormLogin">Inciar sesion:</div>
+						<div class="tituloFormLogin">Inciar sesión:</div>
 						<form id="loginForm">
 
 							<div class="boxInput" data-validar="mail">
@@ -143,11 +143,24 @@
 								<div class="inputError"></div>
 							</div>
 
-							<input type="submit" id="btnLogin" value="Iniciar">
+							<div class="cols">
+								<input type="button" id="btnLoginCancel" value="Cancelar">
+								<input type="submit" id="btnLogin" value="Iniciar">
+							</div>
 						</form>
+
+						<div id="olvidePass">¿Olvidaste tu contraseña?</div>
+
+						<div class="tituloFormLogin">Inciar sesión con:</div>
+						<div id="loginRedesBox">
+							<div id="googleLoginBox">
+								<div id="googleLogin"></div>
+							</div>
+						</div>
 					</div>
 					<ul id="menuBox">
-						<li id="mLogin" class="menuItem">Login</li>
+						<div id="infoUserBox"></div>
+						<li id="mLogin" class="menuItem">Inicar Sesión</li>
 						<li id="mCarrito" class="menuItem">Carrito</li>
 						<li id="mCategoria" class="menuItem">Categorias</li>
 						<ul id="mCategorias"></ul>

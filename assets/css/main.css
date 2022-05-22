@@ -142,6 +142,9 @@ img.cuadroGuiaH {
 	width: auto;
 	height: 100%;
 }
+.nowrap{
+	white-space: nowrap;
+}
 
 
 
@@ -709,11 +712,23 @@ div#ventanaPOP {
 				transition: all 500ms cubic-bezier(0.52, 0.1, 0.32, 1);
 			}
 			nav#menuGlobal.activo{
-				right: -0.01vw;
+				right: -0.1vw;
 				display: flex;
 				justify-content: flex-end;
 				align-items: center;
 			}
+				ul#menuBox {
+					width: calc(100% - (var(--margenGlobal) * 2));
+					max-height: calc(100% - (var(--margenGlobal) * 2));
+					margin-top: 88px;
+					position: relative;
+					right: var(--margenGlobal);
+					text-align: right;
+					font-size: clamp(20px, 3vw, 38px);
+					color: #fff;
+					overflow-x: hidden;
+					overflow-y: auto;
+				}
 				div#loginBox {
 					width: 100%;
 					height: 100%;
@@ -732,7 +747,7 @@ div#ventanaPOP {
 				div#loginBox.activo{
 					left: 0%;
 				}
-					div#tituloFormLogin {
+					div.tituloFormLogin {
 						font-size: clamp(20px, 3vw, 38px);
 						color: #fff;
 						margin-bottom: 2rem;
@@ -740,6 +755,7 @@ div#ventanaPOP {
 					form#loginForm {
 						width: calc(100% - var(--margenGlobal));
 						max-width: 400px;
+						text-align: right;
 					}
 						form#loginForm .boxInput {
 							margin-bottom: 30px;
@@ -750,28 +766,83 @@ div#ventanaPOP {
 							form#loginForm .iconoStatus i{
 								position: absolute;
 							}
+								#loginForm .boxInput.valido .iconoStatus i:before {
+									color: dimgrey;
+								}
 							input#btnLogin {
 								width: auto;
 								margin: 2.6em 0 0 auto;
 								background-color: var(--colorTercero);
 								cursor: pointer;
 								transition: all 200ms ease-in-out;
+								display: inline-block;
+								margin-left: 14px;
 							}
 							form#loginForm input#btnLogin:hover{
-								background-color: #5cff10;
+								background-color: #ffff10;
 							}
-
-				ul#menuBox {
-					width: calc(100% - (var(--margenGlobal) * 2));
-					max-height: calc(100% - (var(--margenGlobal) * 2));
-					margin-top: 88px;
-					position: relative;
-					right: var(--margenGlobal);
+							input#btnLoginCancel {
+								width: auto;
+								margin: 2.6em 0 0 auto;
+								background-color: darkgray;
+								cursor: pointer;
+								transition: all 200ms ease-in-out;
+								display: inline-block;
+							}
+							form#loginForm input#btnLoginCancel:hover{
+								background-color: #fff;
+							}
+				
+				#infoUserBox{
 					text-align: right;
-					font-size: clamp(20px, 3vw, 38px);
-					color: #fff;
-					overflow-y: auto;
-				}
+				}		
+					div#infoUser {
+						width: fit-content;
+						display: flex;
+						justify-content: flex-end;
+						padding: 12px 0px;
+						border-bottom: 1px dashed var(--colorPrincipalDark);
+						margin: 0 0 0 auto;
+					}
+						#infoUser .col1 {
+							width: 100px;
+							height: 100px;
+							flex: 0 0 100px;
+							border-radius: 50%;
+							overflow: hidden;
+						}
+							#infoUser .col1 img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								object-position: center;
+							}
+						#infoUser .col2 {
+							font-family: 'Barlow Condensed';
+							font-size: clamp(20px, 1.2vw, 28px);
+							text-align: left;
+							padding-left: 24px;
+						}
+							#infoUser .userNombre {
+								margin-bottom: 1rem;
+								font-size: 110%;
+								font-family: 'Grape Nuts';
+							}
+							#infoUser ul {
+								font-size: 90%;
+							}
+								#infoUser ul li {
+									margin-bottom: 4px;
+									list-style: circle inside;
+									cursor: pointer;
+									transition: all 200ms ease-in-out;
+								}
+								#infoUser ul li:hover{
+									color: var(--colorTercero);
+								}
+
+
+
 					ul#menuBox .menuItem{
 						cursor: pointer;
 						transition: all 200ms ease-in-out;
@@ -1724,6 +1795,18 @@ div#footerGeneral {
 	div#destacadosArticulosGeneral {
 		padding: 18px var(--margenGlobal);
 	}
+
+	nav#menuGlobal {
+		width: 88vw;
+		right: -88.01vw;
+	}
+	div#infoUser {
+		flex-wrap: wrap;
+		text-align: right;
+	}
+		#infoUser .col2 {
+			text-align: right;
+		}
 	
 }
 

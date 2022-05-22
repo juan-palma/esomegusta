@@ -439,46 +439,111 @@ function formulario(e){
 }
 
 
+
+function activeLoginRedes(){
+	//Funciones para el login con google
+	function handleCredentialResponseGoogle(response){
+		console.log("Encoded JWT ID token: " + response.credential);
+	}
+	google.accounts.id.initialize({
+		client_id: "974553466428-7rn34it6f65dk52ajdm32v8lp1he29is.apps.googleusercontent.com",
+		callback: handleCredentialResponseGoogle
+	});
+	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
+	google.accounts.id.prompt(); // also display the One Tap dialog
+}
 function loginUser(){
 	el.loginBox.classList.add('activo');
+	//verificamos si el usuario tiene credenciales para autorrellenar el formulario por el
+	setTimeout(()=>{
+		navigator.credentials
+		.get({ 'password': true })
+		.then(credential => {
+			if (credential) {
+				el.loginForm.username.value = credential.id;
+				el.loginForm.password = credential.password;
+			}
+		});
+	}, 350);
 }
 function loginUserCancel(){
-	el.login.clear();
+	el.fLoginv.clear();
 	el.loginBox.classList.remove('activo');
 }
+function loginUserClose(){
+	logeando = false;
+	el.profile = "";
+	localStorage.removeItem('profile', el.profile);
+	localStorage.removeItem('_id', el.profile._id);
+	localStorage.removeItem('username', el.profile.user);
+	el.infoUserBox.innerHTML = "";
+	el.login.removeEventListener('click', loginUserClose);
+	el.login.addEventListener('click', loginUser);
+	el.login.textContent = "Inicar Sesión";
+
+}
+
+function activeLogin(){
+	logeando = true;
+	el.login.removeEventListener('click', loginUser);
+	el.login.addEventListener('click', loginUserClose);
+	el.login.textContent = "Cerrar Sesión";
+
+	const img = (el.profile.img == "") ? "avatar.webp" : el.profile.img ;
+	const infoUser = document.createElement('div');
+	infoUser.id = "infoUser";
+	infoUser.innerHTML = `
+		<div class="col1">
+			<img src="./siteData/users/img/${img}" alt="Foto Usuario" width="180" height="180" />
+		</div>
+
+		<div class="col2">
+			<div class="userNombre">
+				Hola <span class="nowrap">${el.profile.nombre} ${el.profile.aPaterno}</span>
+			</div>
+			<ul>
+				<li id="userPerfil">Mis Perfil</li>
+				<li id="userPedidos">Mis pedidos</li>
+				<li id="userConfig">Configuración</li>
+			</ul>
+		</div>
+	`
+	el.infoUserBox.appendChild(infoUser);
+}
+
 let logeando = false;
 const sendLoginForm = async function(e){
 	e.preventDefault();
+	//si esta corriendo un proceso de login no permitimos que el usuario pueda volver a usar el boton de enviar ni mandar otra solicitur hasta que la primera se resuelva.
 	if(logeando){ return; }
 
-	function logueado(j){
-		console.log(j);
-		el.profile = j;
-
+	//Funcion que se ejecutara si se valida correctamente al usuario y se recieve una respuesta satisfactorai del servidor.
+	function logueado(){
+		//Si se permiten las credenciales en el sistema se crea una nueva credencial para el usuario y se guarda o se refuerzan los datos si es que el usuario ya cuenta con una credencial creada.
 		if (window.PasswordCredential) {
 			const c = Promise.resolve(new PasswordCredential(e.target));
 			c.then(v => {
-				return navigator.credentials.store(v);
-			})
-			.then(r => console.log(r))
-			.catch(error => console.error('Error:', error));
+				navigator.credentials.store(v);
+			}).catch(error => console.error('Error:', error));
 		}
 
+		activeLogin();
 		el.fLoginv.clear();
-		logeando = false;
+		loginUserCancel();
 	}
 
+	//Funcion que se ejecuta si existe algun problema con los datos enviados.
 	function error(j){
 		console.log(j);
 		logeando = false;
 		pop(j.message, 'alert');
 	}
 
+	// se verifica que los campos enviados por el usuario esten todos correctos y se hace el la peticion de validacion al servidor API-REST
 	if(el.fLoginv.comprobarForm()){
 		const formData = new FormData(el.loginForm);
 		logeando = true;
 		try {
-			//const boundary = "---------EsoMeGustaBoundary" + new Date().getTime();
 			const myHeaders = new Headers({
 				"Accept": 'application/json'
 				// "Content-Type": "multipart/form-data; boundary=multipart-form-boundary"
@@ -503,11 +568,14 @@ const sendLoginForm = async function(e){
 			const data = await response.json();
 			
 			if(data.success){
-				logueado(data.data);
+				el.profile = data.data;
+				localStorage.setItem('profile', JSON.stringify(el.profile));
+				localStorage.setItem('_id', el.profile._id);
+				localStorage.setItem('username', el.profile.user);
+				logueado();
 			} else{
 				error(data);
 			}
-			
 		} catch (error) {
 			logeando = false;
 			console.log(error);
@@ -554,18 +622,27 @@ function iniciar() {
 	el.categoria = document.getElementById('mCategoria');
 
 	el.login = document.getElementById('mLogin');
+	el.login.addEventListener('click', loginUser);
 	el.loginBox = document.getElementById('loginBox');
 	el.loginForm = document.getElementById('loginForm');
 	el.loginForm.addEventListener('submit', sendLoginForm);
+	el.btnLoginCancel = document.getElementById('btnLoginCancel');
+	el.btnLoginCancel.addEventListener('click', loginUserCancel);
 	el.fLoginv = new ValidarForm();
 	el.fLoginv.form = el.loginForm;
 	el.fLoginv.run();
+	el.infoUserBox = document.getElementById('infoUserBox');
+	if(localStorage.getItem('profile')) {
+		el.profile = JSON.parse(localStorage.getItem('profile'));
+		console.log(el.profile);
+		activeLogin();
+	}
+	activeLoginRedes();
 
 	el.carrito = document.getElementById('mCarrito');
 	el.personalizado = document.getElementById('mPersonalizado');
 	el.contacto = document.getElementById('mContacto');
 	el.categoria.addEventListener('click', function(){ this.classList.toggle('activo') } );
-	el.login.addEventListener('click', loginUser);
 	el.carrito.addEventListener('click', () => { window.location.href = "/carrito"; });
 	el.personalizado.addEventListener('click', () => { window.location.href = "/personalizado"; });
 	el.contacto.addEventListener('click', () => { window.location.href = "/contacto"; });
@@ -701,7 +778,7 @@ function iniciar() {
 //importamos los archivos y librerias necesarios
 requirejs.config({
 	baseUrl: "assets/js/owner",
-	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"},
+	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"}, 
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
+requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client"], iniciar);

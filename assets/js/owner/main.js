@@ -444,13 +444,6 @@ function activeLoginRedes(){
 	//Funciones para el login con google
 	function handleCredentialResponseGoogle(response){
 		console.log(response);
-		const responsePayload = decodeJwtResponse(response.credential);
-		console.log("ID: " + responsePayload.sub);
-		console.log('Full Name: ' + responsePayload.name);
-		console.log('Given Name: ' + responsePayload.given_name);
-		console.log('Family Name: ' + responsePayload.family_name);
-		console.log("Image URL: " + responsePayload.picture);
-		console.log("Email: " + responsePayload.email);
 	}
 	google.accounts.id.initialize({
 		client_id: "974553466428-7rn34it6f65dk52ajdm32v8lp1he29is.apps.googleusercontent.com",

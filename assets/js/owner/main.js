@@ -455,16 +455,16 @@ function activeLoginRedes(){
 function loginUser(){
 	el.loginBox.classList.add('activo');
 	//verificamos si el usuario tiene credenciales para autorrellenar el formulario por el
-	setTimeout(()=>{
-		navigator.credentials
-		.get({ 'password': true })
-		.then(credential => {
-			if (credential) {
-				el.loginForm.username.value = credential.id;
-				el.loginForm.password = credential.password;
-			}
-		});
-	}, 350);
+	// setTimeout(()=>{
+	// 	navigator.credentials
+	// 	.get({ 'password': true })
+	// 	.then(credential => {
+	// 		if (credential) {
+	// 			el.loginForm.username.value = credential.id;
+	// 			el.loginForm.password = credential.password;
+	// 		}
+	// 	});
+	// }, 350);
 }
 function loginUserCancel(){
 	el.fLoginv.clear();
@@ -482,7 +482,6 @@ function loginUserClose(){
 	el.login.textContent = "Inicar Sesión";
 
 }
-
 function activeLogin(){
 	logeando = true;
 	el.login.removeEventListener('click', loginUser);

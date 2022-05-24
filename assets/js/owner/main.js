@@ -449,7 +449,7 @@ const handleCredentialResponseGoogle = async function(response){
 		headers: myHeaders,
 		mode: 'cors',
 		cache: 'no-cache',
-		body: {token:response.credential},
+		body: JSON.stringify({token:response.credential}),
 		redirect: 'follow'
 	}
 	const myRequest = new Request(`${urlBase}/login/google`, myInit);

@@ -439,7 +439,7 @@ function formulario(e){
 }
 
 //Funciones para el login con google
-const handleCredentialResponseGoogle = async function(){
+const handleCredentialResponseGoogle = async function(response){
 	const myHeaders = new Headers({
 		"Accept": 'application/json',
 		"Content-Type": "application/json"

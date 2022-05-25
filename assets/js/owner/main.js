@@ -440,6 +440,8 @@ function formulario(e){
 
 //Funciones para el login con google
 const handleCredentialResponseGoogle = async function(response){
+	if(logeando){ return; }
+	logeando = true;
 	const myHeaders = new Headers({
 		"Accept": 'application/json',
 		"Content-Type": "application/json"
@@ -452,11 +454,25 @@ const handleCredentialResponseGoogle = async function(response){
 		body: JSON.stringify({token:response.credential}),
 		redirect: 'follow'
 	}
-	const myRequest = new Request(`${urlBase}/login/google`, myInit);
-	const responseGoogle = await fetch(myRequest);
-	const data = await responseGoogle.json();
+	try {
+		const myRequest = new Request(`${urlBase}/login/google`, myInit);
+		const responseGoogle = await fetch(myRequest);
+		const data = await responseGoogle.json();
 
-	console.log(data);
+		console.log(data);
+		if(data.success){
+			el.profile = data.data;
+			localStorage.setItem('profile', JSON.stringify(el.profile));
+			localStorage.setItem('_id', el.profile._id);
+			localStorage.setItem('username', el.profile.user);
+			logueado();
+		} else{
+			logeando = true;
+		}
+	} catch (error) {
+		logeando = false;
+		console.log(error);
+	}
 }
 function activeLoginRedes(){
 	//Funciones para el login con google
@@ -504,11 +520,12 @@ function activeLogin(){
 	el.login.textContent = "Cerrar Sesión";
 
 	const img = (el.profile.img == "") ? "avatar.webp" : el.profile.img ;
+	const ruta = (el.profile.metodo == "local") ? "./siteData/users/img/" : "";
 	const infoUser = document.createElement('div');
 	infoUser.id = "infoUser";
 	infoUser.innerHTML = `
 		<div class="col1">
-			<img src="./siteData/users/img/${img}" alt="Foto Usuario" width="180" height="180" />
+			<img src="${ruta}${img}" alt="Foto Usuario" width="180" height="180" />
 		</div>
 
 		<div class="col2">

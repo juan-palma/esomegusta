@@ -465,7 +465,9 @@ const handleCredentialResponseGoogle = async function(response){
 			localStorage.setItem('profile', JSON.stringify(el.profile));
 			localStorage.setItem('_id', el.profile._id);
 			localStorage.setItem('username', el.profile.user);
-			logueado();
+			activeLogin();
+			el.fLoginv.clear();
+			loginUserCancel();
 		} else{
 			logeando = true;
 		}

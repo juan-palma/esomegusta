@@ -532,7 +532,7 @@ function activeLogin(){
 
 		<div class="col2">
 			<div class="userNombre">
-				Hola <span class="nowrap">${el.profile.nombre} ${el.profile.aPaterno}</span>
+				Hola <span class="nowrap">${el.profile.nombre} ${el.profile.apellidos}</span>
 			</div>
 			<ul>
 				<li id="userPerfil">Mis Perfil</li>

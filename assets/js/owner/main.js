@@ -440,45 +440,43 @@ function formulario(e){
 
 
 //Funciones para Login de facebook
-// function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-// 	console.log('statusChangeCallback');
-// 	console.log(response);                   // The current login status of the person.
-// 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-// 		//testAPI();
-// 		console.log('llamar un test o continuar con la aplicacion.');  
-// 	} else {
-// 		console.log('no login');                               // Not logged into your webpage or we are unable to tell.
-// 		//document.getElementById('status').innerHTML = 'Please log ' + 'into this webpage.';
-// 	}
-// }
-// function checkLoginState() {               // Called when a person is finished with the Login Button.
-// 	FB.getLoginStatus(function(response) {   // See the onlogin handler
-// 		statusChangeCallback(response);
-// 	});
-// }
-// window.fbAsyncInit = function() {
-// 	FB.init({
-// 		appId      : '671252183973647',
-// 		cookie     : true,                     // Enable cookies to allow the server to access the session.
-// 		xfbml      : true,                     // Parse social plugins on this webpage.
-// 		version    : 'v14.0'           // Use this Graph API version for this call.
-// 	});
+function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+	console.log('statusChangeCallback');
+	console.log(response);                   // The current login status of the person.
+	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+		//testAPI();
+		console.log('llamar un test o continuar con la aplicacion.');  
+	} else {
+		console.log('no login');                               // Not logged into your webpage or we are unable to tell.
+		//document.getElementById('status').innerHTML = 'Please log ' + 'into this webpage.';
+	}
+}
+function checkLoginState() {               // Called when a person is finished with the Login Button.
+	FB.getLoginStatus(function(response) {   // See the onlogin handler
+		statusChangeCallback(response);
+	});
+}
+window.fbAsyncInit = function() {
+	FB.init({
+		appId      : '671252183973647',
+		cookie     : true,                     // Enable cookies to allow the server to access the session.
+		xfbml      : true,                     // Parse social plugins on this webpage.
+		version    : 'v14.0'           // Use this Graph API version for this call.
+	});
 
 
-// 	FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
-// 		statusChangeCallback(response);        // Returns the login status.
-// 	});
-// };
-// function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-// 	console.log('Welcome!  Fetching your information.... ');
-// 	FB.api('/me', function(response) {
-// 		console.log('Successful login for: ' + response.name);
-// 		document.getElementById('status').innerHTML =
-// 		'Thanks for logging in, ' + response.name + '!';
-// 	});
-// }
-
-
+	FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+		statusChangeCallback(response);        // Returns the login status.
+	});
+};
+function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+	console.log('Welcome!  Fetching your information.... ');
+	FB.api('/me', function(response) {
+		console.log('Successful login for: ' + response.name);
+		document.getElementById('status').innerHTML =
+		'Thanks for logging in, ' + response.name + '!';
+	});
+}
 // function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
 // 	console.log('statusChangeCallback');
 // 	console.log(response);                   // The current login status of the person.
@@ -543,7 +541,7 @@ function activeLoginRedes(){
 	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
 	//google.accounts.id.prompt(); // also display the One Tap dialog
 
-	//checkLoginState();
+	checkLoginState();
 }
 function loginUser(){
 	el.loginBox.classList.add('activo');
@@ -876,5 +874,4 @@ requirejs.config({
 	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"}, 
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client"], iniciar);
-//, "https://connect.facebook.net/en_US/sdk.js"
+requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client", "https://connect.facebook.net/en_US/sdk.js"], iniciar);

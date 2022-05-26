@@ -541,7 +541,8 @@ function activeLoginRedes(){
 	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
 	//google.accounts.id.prompt(); // also display the One Tap dialog
 
-	checkLoginState();
+	//LLamada al estado del login de facebook
+	//checkLoginState();
 }
 function loginUser(){
 	el.loginBox.classList.add('activo');

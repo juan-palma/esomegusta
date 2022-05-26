@@ -451,15 +451,11 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
 		//document.getElementById('status').innerHTML = 'Please log ' + 'into this webpage.';
 	}
 }
-
-
 function checkLoginState() {               // Called when a person is finished with the Login Button.
 	FB.getLoginStatus(function(response) {   // See the onlogin handler
 		statusChangeCallback(response);
 	});
 }
-
-
 window.fbAsyncInit = function() {
 	FB.init({
 		appId      : '671252183973647',
@@ -473,7 +469,6 @@ window.fbAsyncInit = function() {
 		statusChangeCallback(response);        // Returns the login status.
 	});
 };
- 
 function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
 	console.log('Welcome!  Fetching your information.... ');
 	FB.api('/me', function(response) {
@@ -545,6 +540,8 @@ function activeLoginRedes(){
 	});
 	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
 	//google.accounts.id.prompt(); // also display the One Tap dialog
+
+	checkLoginState();
 }
 function loginUser(){
 	el.loginBox.classList.add('activo');
@@ -731,7 +728,9 @@ function iniciar() {
 		console.log(el.profile);
 		activeLogin();
 	}
+	//activar logins de las redes
 	activeLoginRedes();
+	
 
 	el.carrito = document.getElementById('mCarrito');
 	el.personalizado = document.getElementById('mPersonalizado');

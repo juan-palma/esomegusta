@@ -461,7 +461,7 @@ window.fbAsyncInit = function() {
 		appId      : '671252183973647',
 		cookie     : true,                     // Enable cookies to allow the server to access the session.
 		xfbml      : true,                     // Parse social plugins on this webpage.
-		version    : '14.0'           // Use this Graph API version for this call.
+		version    : 'v14.0'           // Use this Graph API version for this call.
 	});
 
 

@@ -75,6 +75,32 @@
 		})(window,document,'script','dataLayer','GTM-N9HHZFJ');</script> -->
 		<!-- End Google Tag Manager -->
 
+		<!-- Facebook SDK -->
+		<!-- <script>
+			// window.fbAsyncInit = function() {
+			// 	FB.init({
+			// 		appId      : '671252183973647',
+			// 		cookie     : true,
+			// 		xfbml      : true,
+			// 		version    : '14.0'
+			// 	});
+					
+			// 	FB.AppEvents.logPageView();
+			// 	FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+			// 		statusChangeCallback(response);        // Returns the login status.
+			// 	}); 
+			// };
+		
+			// (function(d, s, id){
+			// var js, fjs = d.getElementsByTagName(s)[0];
+			// if (d.getElementById(id)) {return;}
+			// js = d.createElement(s); js.id = id;
+			// js.src = "https://connect.facebook.net/en_US/sdk.js";
+			// fjs.parentNode.insertBefore(js, fjs);
+			// }(document, 'script', 'facebook-jssdk'));
+		</script> -->
+		<!-- End Facebook SDK -->
+
 		<!-- <script>
 			// if('serviceWorker' in navigator) {
 			//   navigator.serviceWorker.register('/sw.js');
@@ -151,10 +177,16 @@
 
 						<div id="olvidePass">¿Olvidaste tu contraseña?</div>
 
-						<div class="tituloFormLogin">Inciar sesión con:</div>
+						<div class="tituloFormLogin">O inicia sesión con:</div>
 						<div id="loginRedesBox">
 							<div id="googleLoginBox">
 								<div id="googleLogin"></div>
+							</div>
+							<div id="facebookLoginBox">
+								<fb:login-button 
+									scope="public_profile,email"
+									onlogin="checkLoginState();">
+								</fb:login-button>
 							</div>
 						</div>
 					</div>

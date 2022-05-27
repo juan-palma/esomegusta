@@ -467,6 +467,13 @@ window.fbAsyncInit = function() {
 	// 	statusChangeCallback(response);        // Returns the login status.
 	// });
 };
+// FB.login(function(response) {
+// 	if (response.status === 'connected') {
+// 		// Logged into your webpage and Facebook.
+// 	} else {
+// 		// The person is not logged into your webpage or we are unable to tell. 
+// 	}
+// });
 function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
 	console.log('Welcome!  Fetching your information.... ');
 	FB.api('/me', function(response) {

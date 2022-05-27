@@ -475,7 +475,7 @@ function sendTokenFacebook(response) {
 	console.log('Welcome!  Fetching your information.... ');
 	//let url = '/me/permissions';
 	let url = '/me';
-	FB.api(url, {fields:'id,name,first_name,last_name,email,picture'}, function(response) {
+	FB.api(url, {fields:'id,name,first_name,second_name,last_name,email,picture'}, function(response) {
 		console.log(response);
 		console.log('Successful login for: ' + response.name);
 	});

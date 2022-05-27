@@ -446,7 +446,6 @@ function statusChangeCallback(response) {  // Called with the results from FB.ge
 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
 		//testAPI();
 		console.log('llamar un test o continuar con la aplicacion.');
-		testAPI();
 	} else {
 		console.log('no login');                               // Not logged into your webpage or we are unable to tell.
 		//document.getElementById('status').innerHTML = 'Please log ' + 'into this webpage.';
@@ -464,8 +463,6 @@ window.fbAsyncInit = function() {
 		xfbml      : true,                     // Parse social plugins on this webpage.
 		version    : 'v14.0'           // Use this Graph API version for this call.
 	});
-
-
 	// FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
 	// 	statusChangeCallback(response);        // Returns the login status.
 	// });
@@ -545,6 +542,7 @@ function activeLoginRedes(){
 	//LLamada al estado del login de facebook
 	//checkLoginState();
 }
+//mostra la ventan con el formulario del login en el sitio
 function loginUser(){
 	el.loginBox.classList.add('activo');
 	//verificamos si el usuario tiene credenciales para autorrellenar el formulario por el

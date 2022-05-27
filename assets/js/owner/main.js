@@ -474,7 +474,7 @@ function sendTokenFacebook(response) {
 	console.log(response);                    // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
 	console.log('Welcome!  Fetching your information.... ');
 	let url = '/me/permissions';
-	url = '/me/';
+	url = '/me';
 	FB.api(url, function(response) {
 		console.log(response);
 		console.log('Successful login for: ' + response.name);

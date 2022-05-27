@@ -874,4 +874,4 @@ requirejs.config({
 	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"}, 
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client", "https://connect.facebook.net/es_ES/sdk.js"], iniciar);
+requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client", "https://connect.facebook.net/es_LA/sdk.js"], iniciar);

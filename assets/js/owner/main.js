@@ -441,14 +441,11 @@ function formulario(e){
 
 //Funciones para Login de facebook
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-	console.log('statusChangeCallback');
-	console.log(response);                   // The current login status of the person.
 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
 		//testAPI();
-		console.log('llamar un test o continuar con la aplicacion.');
+		sendTokenFacebook(response);
 	} else {
-		console.log('no login');                               // Not logged into your webpage or we are unable to tell.
-		//document.getElementById('status').innerHTML = 'Please log ' + 'into this webpage.';
+		console.log('no login');
 	}
 }
 function checkLoginState() {               // Called when a person is finished with the Login Button.
@@ -474,29 +471,14 @@ window.fbAsyncInit = function() {
 // 		// The person is not logged into your webpage or we are unable to tell. 
 // 	}
 // });
-function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+function sendTokenFacebook(response) {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
 	console.log('Welcome!  Fetching your information.... ');
-	FB.api('/me', function(response) {
+	FB.api('/me/permissions', function(response) {
 		console.log(response);
 		console.log('Successful login for: ' + response.name);
-		//document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
 	});
 }
-// function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
-// 	console.log('statusChangeCallback');
-// 	console.log(response);                   // The current login status of the person.
-// 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-// 		testAPI();  
-// 	} else {                                 // Not logged into your webpage or we are unable to tell.
-// 		document.getElementById('status').innerHTML = 'Please log ' +
-// 		'into this webpage.';
-// 	}
-// }
-// function checkLoginState() {
-// 	FB.getLoginStatus(function(response) {
-// 		statusChangeCallback(response);
-// 	});
-// }
+
 
 
 //Funciones para el login con google

@@ -442,7 +442,6 @@ function formulario(e){
 //Funciones para Login de facebook
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-		//testAPI();
 		sendTokenFacebook(response);
 	} else {
 		console.log('no login');
@@ -471,7 +470,8 @@ window.fbAsyncInit = function() {
 // 		// The person is not logged into your webpage or we are unable to tell. 
 // 	}
 // });
-function sendTokenFacebook(response) {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+function sendTokenFacebook(response) {  
+	console.log(response);                    // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
 	console.log('Welcome!  Fetching your information.... ');
 	FB.api('/me/permissions', function(response) {
 		console.log(response);

@@ -439,6 +439,8 @@ function formulario(e){
 }
 
 
+
+
 //Funciones para Login de facebook
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
@@ -511,15 +513,6 @@ const sendTokenFacebook = async function (response) {
 		logeando = false;
 		console.log(error);
 	}
-
-
-	// console.log('Welcome!  Fetching your information.... ');
-	// //let url = '/me/permissions';
-	// let url = '/me';
-	// FB.api(url, {fields:'id,name,first_name,middle_name,last_name,email,picture'}, function(response) {
-	// 	console.log(response);
-	// 	console.log('Successful login for: ' + response.name);
-	// });
 }
 
 
@@ -595,6 +588,12 @@ function loginUserCancel(){
 }
 function loginUserClose(){
 	logeando = false;
+	if(el.profile.metodo == "facebook"){
+		FB.logout(function(response) {
+			console.log(response);
+		});
+	}
+
 	el.profile = "";
 	localStorage.removeItem('profile', el.profile);
 	localStorage.removeItem('_id', el.profile._id);

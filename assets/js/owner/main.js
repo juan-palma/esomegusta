@@ -594,7 +594,7 @@ function activeLoginRedes(){
 		client_id: "974553466428-7rn34it6f65dk52ajdm32v8lp1he29is.apps.googleusercontent.com",
 		callback: handleCredentialResponseGoogle
 	});
-	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large", width:240 } );
+	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large", width:260 } );
 	//google.accounts.id.prompt(); // also display the One Tap dialog
 }
 //mostra la ventan con el formulario del login en el sitio

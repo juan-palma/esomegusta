@@ -502,6 +502,9 @@ const sendTokenFacebook = async function (response) {
 			el.fLoginv.clear();
 			loginUserCancel();
 		} else{
+			if(data.message == "Ya existe una cuenta con este correo pero no coincide con el identificador de Facebook"){
+				pop(data.message, 'alert');
+			}
 			logeando = true;
 		}
 	} catch (error) {

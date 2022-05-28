@@ -442,7 +442,10 @@ function formulario(e){
 //Funciones para Login de facebook
 function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
 	if (response.status === 'connected') {   // Logged into your webpage and Facebook.
-		sendTokenFacebook(response);
+		FB.api('/me', {fields:'id,name,first_name,middle_name,last_name,email,picture'}, function(response) {
+			sendTokenFacebook(response);
+		});
+		
 	} else {
 		console.log('no login');
 	}
@@ -481,7 +484,7 @@ const sendTokenFacebook = async function (response) {
 		headers: myHeaders,
 		mode: 'cors',
 		cache: 'no-cache',
-		body: JSON.stringify({token:response.authResponse.accessToken}),
+		body: JSON.stringify(response),
 		redirect: 'follow'
 	}
 	try {

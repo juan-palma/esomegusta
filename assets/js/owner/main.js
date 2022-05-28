@@ -417,7 +417,6 @@ function formulario(e){
 	if(enviandoForm){ return; }
 
 	function enviado(j){
-		console.log(j);
 		el.fPv.clear();
 		pop('Gracias por contactarnos, tu correo fue enviado y en breve me pondre en contacto contigo.', 'ok');
 		enviandoForm = false;
@@ -476,7 +475,6 @@ window.fbAsyncInit = function() {
 // 	}
 // });
 const sendTokenFacebook = async function (response) {  
-	console.log(response);
 	const myHeaders = new Headers({
 		"Accept": 'application/json',
 		"Content-Type": "application/json"
@@ -494,7 +492,6 @@ const sendTokenFacebook = async function (response) {
 		const responseGoogle = await fetch(myRequest);
 		const data = await responseGoogle.json();
 
-		console.log(data);
 		if(data.success){
 			el.profile = data.data;
 			localStorage.setItem('profile', JSON.stringify(el.profile));
@@ -538,7 +535,6 @@ const handleCredentialResponseGoogle = async function(response){
 		const responseGoogle = await fetch(myRequest);
 		const data = await responseGoogle.json();
 
-		console.log(data);
 		if(data.success){
 			el.profile = data.data;
 			localStorage.setItem('profile', JSON.stringify(el.profile));
@@ -556,16 +552,50 @@ const handleCredentialResponseGoogle = async function(response){
 	}
 }
 function activeLoginRedes(){
+	//Funciones para el login con Apple:
+	// Listen for authorization success.
+	// document.addEventListener('AppleIDSignInOnSuccess', (event) => {
+	// 	// Handle successful response.
+	// 	console.log(event.detail.data);
+	// });
+
+	// // Listen for authorization failures.
+	// document.addEventListener('AppleIDSignInOnFailure', (event) => {
+	// 	// Handle error.
+	// 	console.log(event.detail.error);
+	// });
+
+	// console.log(window.href);
+	// AppleID.auth.init({
+	// 	clientId : '[CLIENT_ID]',
+	// 	scope : 'name email',
+	// 	redirectURI : window.href,
+	// 	state : '[STATE]',
+	// 	nonce : '[NONCE]',
+	// 	usePopup : true
+	// });
+
+	// try {
+	// 	const data = await AppleID.auth.signIn()
+	// 	console.log(data);
+	// 	// Handle successful response.
+	// } catch ( error ) {
+	// 	console.log(error);
+	// 	// Handle error.
+	// }
+
+
+
+
+
+
 	//Funciones para el login con google
 	google.accounts.id.initialize({
 		client_id: "974553466428-7rn34it6f65dk52ajdm32v8lp1he29is.apps.googleusercontent.com",
 		callback: handleCredentialResponseGoogle
 	});
-	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large" } );
+	google.accounts.id.renderButton( document.getElementById("googleLogin"), { theme: "outline", size: "large", width:260 } );
 	//google.accounts.id.prompt(); // also display the One Tap dialog
-
-	//LLamada al estado del login de facebook
-	//checkLoginState();
 }
 //mostra la ventan con el formulario del login en el sitio
 function loginUser(){
@@ -592,7 +622,7 @@ function loginUserClose(){
 		FB.getLoginStatus(function(response) {   // See the onlogin handler
 			if(response.status === 'connected'){
 				FB.logout(function(response) {
-					console.log(response);
+					//console.log(response);
 				});
 			}
 		});
@@ -910,4 +940,14 @@ requirejs.config({
 	paths: { a: "../animaciones", l: "../librerias", n: "/assets/node_modules"}, 
 });
 //requirejs(["l/modernizr", "n/lottie-web/build/player/lottie.min", "n/animejs/lib/anime.min", "l/parallax", "precarga", "observer", "validaciones", "alertas", "peticiones"], iniciar);
-requirejs(["l/modernizr", "precarga", "observer", "validaciones", "alertas", "peticiones", "https://accounts.google.com/gsi/client", "https://connect.facebook.net/es_LA/sdk.js"], iniciar);
+requirejs([
+	"l/modernizr",
+	"precarga",
+	"observer",
+	"validaciones",
+	"alertas",
+	"peticiones",
+	"https://accounts.google.com/gsi/client",
+	"https://connect.facebook.net/es_LA/sdk.js",
+	"https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"
+], iniciar);

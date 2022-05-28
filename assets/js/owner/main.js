@@ -470,7 +470,7 @@ window.fbAsyncInit = function() {
 // 		// The person is not logged into your webpage or we are unable to tell. 
 // 	}
 // });
-function sendTokenFacebook(response) {  
+const sendTokenFacebook = async function (response) {  
 	console.log(response);
 	const myHeaders = new Headers({
 		"Accept": 'application/json',

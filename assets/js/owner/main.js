@@ -471,14 +471,49 @@ window.fbAsyncInit = function() {
 // 	}
 // });
 function sendTokenFacebook(response) {  
-	console.log(response);                    // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
-	console.log('Welcome!  Fetching your information.... ');
-	//let url = '/me/permissions';
-	let url = '/me';
-	FB.api(url, {fields:'id,name,first_name,middle_name,last_name,email,picture'}, function(response) {
-		console.log(response);
-		console.log('Successful login for: ' + response.name);
+	console.log(response);
+	const myHeaders = new Headers({
+		"Accept": 'application/json',
+		"Content-Type": "application/json"
 	});
+	const myInit = {
+		method: 'POST',
+		headers: myHeaders,
+		mode: 'cors',
+		cache: 'no-cache',
+		body: JSON.stringify({token:response.authResponse.accessToken}),
+		redirect: 'follow'
+	}
+	try {
+		const myRequest = new Request(`${urlBase}/login/facebook`, myInit);
+		const responseGoogle = await fetch(myRequest);
+		const data = await responseGoogle.json();
+
+		console.log(data);
+		if(data.success){
+			el.profile = data.data;
+			localStorage.setItem('profile', JSON.stringify(el.profile));
+			localStorage.setItem('_id', el.profile._id);
+			localStorage.setItem('username', el.profile.user);
+			activeLogin();
+			el.fLoginv.clear();
+			loginUserCancel();
+		} else{
+			logeando = true;
+		}
+	} catch (error) {
+		logeando = false;
+		console.log(error);
+	}
+
+
+	// console.log('Welcome!  Fetching your information.... ');
+	// //let url = '/me/permissions';
+	// let url = '/me';
+	// FB.api(url, {fields:'id,name,first_name,middle_name,last_name,email,picture'}, function(response) {
+	// 	console.log(response);
+	// 	console.log('Successful login for: ' + response.name);
+	// });
 }
 
 

@@ -589,9 +589,14 @@ function loginUserCancel(){
 function loginUserClose(){
 	logeando = false;
 	if(el.profile.metodo == "facebook"){
-		FB.logout(function(response) {
-			console.log(response);
+		FB.getLoginStatus(function(response) {   // See the onlogin handler
+			if(response.status === 'connected'){
+				FB.logout(function(response) {
+					console.log(response);
+				});
+			}
 		});
+		
 	}
 
 	el.profile = "";
